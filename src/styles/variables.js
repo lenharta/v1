@@ -23,8 +23,11 @@ const variables = css`
     --fz-heading: 32px;
 
     // Reused
-    --border-radius: 4px;
+    --border-radius: 6px;
+    --lg-border: solid 8px #242C3D;
     --nav-height: 100px;
+
+    // Animations
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
     // Icons

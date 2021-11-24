@@ -1,6 +1,5 @@
 import React from 'react'
-import { Nav, Hero } from './components'
-import { IconExternal, IconFolder, IconGithub, IconInstagram, IconLinkedin, IconTwitter } from './components/icons'
+import { Nav, Layout, Footer, Social, Contact, ToTop } from './components'
 import { GlobalStyle } from './styles'
 
 
@@ -9,13 +8,11 @@ const App = () => {
     <>
       <GlobalStyle />
       <Nav />
-      <Hero />
-      <IconFolder />
-      <IconGithub />
-      <IconExternal />
-      <IconTwitter />
-      <IconInstagram />
-      <IconLinkedin />
+      <Layout />
+      <Social />
+      <Contact />
+      <ToTop />
+      <Footer />
     </>
   )
 }

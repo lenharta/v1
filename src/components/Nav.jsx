@@ -7,11 +7,23 @@ const StyledHeader = styled.header`
   background: var(--bg-navy);
 `;
 
+const StyledNav = styled.nav`
+
+`;
+
+const StyledNavLinks = styled.div`
+
+`;
+
 const Nav = () => {
   return (
     <>
       <StyledHeader>
-        
+        <StyledNav>
+          <StyledNavLinks>
+            
+          </StyledNavLinks>
+        </StyledNav>
       </StyledHeader>
     </>
   )
