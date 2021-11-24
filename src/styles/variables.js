@@ -24,7 +24,14 @@ const variables = css`
 
     // Reused
     --border-radius: 4px;
+    --nav-height: 100px;
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    // Icons
+    --lg-icon-height: 40px;
+    --lg-icon-width: 40px;
+    --sm-icon-height: 20px;
+    --sm-icon-width: 20px;
   }
 `;
 
