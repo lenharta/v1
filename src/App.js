@@ -1,10 +1,12 @@
 import React from 'react'
-import Display from './Display'
+import { GlobalStyle } from './styles'
+
 
 const App = () => {
   return (
     <>
-      <Display initialCount={0}/>
+      <GlobalStyle />
+      <h1>Hello World!</h1> 
     </>
   )
 }
