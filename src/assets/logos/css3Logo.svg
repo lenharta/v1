@@ -1,8 +1,4 @@
-import React from 'react'
-
-const Css3Logo = () => {
-  return (
-    <svg width="256px" height="361px" viewBox="0 0 256 361" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+<svg viewBox="0 0 256 361" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
       <g>
         <path d="M127.843868,360.087912 L23.6617143,331.166242 L0.445186813,70.7657143 L255.554813,70.7657143 L232.31367,331.125451 L127.843868,360.087912 L127.843868,360.087912 Z" 
         fill="#E38229"></path>
@@ -24,7 +20,3 @@ const Css3Logo = () => {
         fill="#161C27"></path>
       </g>
     </svg>
-  )
-}
-
-export default Css3Logo

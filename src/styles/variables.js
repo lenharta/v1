@@ -37,6 +37,8 @@ const variables = css`
     --lg-icon-width: 40px;
     --sm-icon-height: 20px;
     --sm-icon-width: 20px;
+    --sm-logo-height: 60px;
+    --sm-logo-Width: 60px;
   }
 `;
 
