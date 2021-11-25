@@ -10,6 +10,24 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  /* Scroll Bar */
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange);
+  }
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--bg-navy);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border: 3px solid var(--bg-navy);
+    border-radius: 10px;
+  }
+
   a {
     cursor: pointer;
     text-decoration: none;
