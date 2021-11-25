@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0;
   z-index: 100;
   height: var(--nav-height);
   width: 100%;
