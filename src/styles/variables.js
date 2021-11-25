@@ -9,6 +9,8 @@ const variables = css`
     --blue: #142037;
     --light-blue: #92B6FF;
     --orange: #E38229;
+    --light-orange: #E3A062;
+    --dark-orange: #E37610;
     --reg-text: #7A90BB;
     --bld-text: #9AB7EF;
 
