@@ -4,10 +4,9 @@ import styled from 'styled-components';
 const StyledHeroContainer = styled.div`
   height: 100vh;
   background: var(--bg-navy);
-
+  
   h1 {
     color: #fff;
-    font-size: 50px;
   }
 `;
 

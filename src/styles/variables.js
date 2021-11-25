@@ -15,7 +15,7 @@ const variables = css`
     --orange: #E38229;
     --light-orange: #E3A062;
     --dark-orange: #E37610;
-    --orange-tint: rgba(227, 130, 41, 0.1);
+    --orange-tint: rgba(227, 130, 41, 0.2);
     --reg-text: #7A90BB;
     --bld-text: #9AB7EF;
 
