@@ -1,11 +1,26 @@
 import React from 'react'
 import styled from 'styled-components';
 
+const StyledHeroContainer = styled.div`
+  height: 100vh;
+  background: var(--bg-navy);
+
+  h1 {
+    color: #fff;
+    font-size: 50px;
+  }
+`;
 
 const Hero = () => {
   return (
     <>
-      <h1>Hero</h1>
+      <StyledHeroContainer>
+        <h1>Hero</h1>
+        <h1>Hero</h1>
+        <h1>Hero</h1>
+        <h1>Hero</h1>
+        <h1>Hero</h1>
+      </StyledHeroContainer>
     </>
   )
 }

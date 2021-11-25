@@ -1,16 +1,21 @@
 import { css } from 'styled-components';
 
 const variables = css`
+
   :root {
+    --font-roboto: 'Roboto', sans-serif;
+
     // Colors
     --x-dark-navy: #111620;
     --light-navy: #242C3D;
     --bg-navy: #161C27;
+    --bg-tint: rgba(22, 28, 39, 0.75);
     --blue: #142037;
     --light-blue: #92B6FF;
     --orange: #E38229;
     --light-orange: #E3A062;
     --dark-orange: #E37610;
+    --orange-tint: rgba(227, 130, 41, 0.1);
     --reg-text: #7A90BB;
     --bld-text: #9AB7EF;
 
@@ -27,6 +32,7 @@ const variables = css`
     // Reused
     --border-radius: 6px;
     --lg-border: solid 8px #242C3D;
+    --btn-border: solid 2px #E38229;
     --nav-height: 100px;
 
     // Animations
