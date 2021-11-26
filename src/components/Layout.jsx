@@ -2,15 +2,26 @@ import React from 'react'
 import { About, Archive, CTA, Experience, Featured, Footer, Hero, ToTop } from '../sections'
 import styled from 'styled-components'
 
-const StyledMainContainer = styled.div`
+const Main = styled.main`
   padding: 0 150px;
+
+  @media (max-width: 1080px) {
+    padding: 0 100px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 25px;
+  }
 `;
 
 const Layout = () => {
   return (
     <>
-      
-      <StyledMainContainer>
+      <Main>
         <Hero />
         <About />
         <Featured />
@@ -19,7 +30,7 @@ const Layout = () => {
         <CTA />
         <ToTop />
         <Footer />
-      </StyledMainContainer>
+      </Main>
     </>
   )
 }

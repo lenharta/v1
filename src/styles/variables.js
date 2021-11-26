@@ -18,16 +18,6 @@ const variables = css`
     --text: #7A90BB;
     --text-heading: #9AB7EF;
 
-    // Fonts
-    --text-sm: 12px;
-    --text-md: 16px;
-    --text-lg: 20px;
-
-    --heading-sm: 22px;
-    --heading-md: 32px;
-    --heading-lg: 52px;
-    --heading-xlg: 64px;
-
     // Reused
     --border-radius: 4px;
     --lg-border: solid 8px #242C3D;

@@ -27,39 +27,20 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1 {
+  .big__heading {
     color: var(--text-heading);
-    font-size: var(--heading-xlg);
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
     font-family: var(--font-heading);
     font-weight: 700;
   }
 
-  h2 {
+  .medium__heading {
     color: var(--text);
-    font-size: var(--heading-lg);
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
     font-family: var(--font-heading);
     font-weight: 700;
-  }
-
-  h3 {
-    color: var(--text-heading);
-    font-size: var(--heading-sm);
-    font-family: var(--font-heading);
-    font-weight: 400;
-  }
-
-  p {
-    color: var(--text);
-    font-size: var(--text-md);
-    font-family: var(--font-text);
-    font-weight: 400;
-  }
-
-  span {
-    color: var(--orange);
-    font-size: var(--text-lg);
-    font-family: var(--font-link);
-    font-weight: 300;
   }
 
   // Scroll Bar
@@ -103,6 +84,10 @@ const GlobalStyle = createGlobalStyle`
   // Class Templates
   .section__heading {
 
+  }
+
+  .section {
+    
   }
 `
 

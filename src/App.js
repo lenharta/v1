@@ -8,8 +8,8 @@ const App = () => {
       <GlobalStyle />
       <Nav />
       <Layout />
-      <Social />
-      <Contact />
+      {/* <Social />
+      <Contact /> */}
     </>
   )
 }
