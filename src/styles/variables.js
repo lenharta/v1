@@ -25,17 +25,18 @@ const variables = css`
 
     --heading-sm: 22px;
     --heading-md: 32px;
-    --heading-lg: 60px;
+    --heading-lg: 52px;
+    --heading-xlg: 64px;
 
     // Reused
-    --border-radius: 6px;
+    --border-radius: 4px;
     --lg-border: solid 8px #242C3D;
-    --btn-border: solid 2px #E38229;
+    --btn-border: solid 1px #E38229;
     --nav-height: 100px;
 
     // Transitions
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --transition-link: ease .4s;
+    --transition-link: ease .3s;
 
     // Icons
     --lg-icon-height: 40px;

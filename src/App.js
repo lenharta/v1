@@ -1,11 +1,12 @@
 import React from 'react'
-import { Layout, Social, Contact } from './components'
+import { Layout, Social, Contact, Nav } from './components'
 import { GlobalStyle } from './styles'
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
+      <Nav />
       <Layout />
       <Social />
       <Contact />

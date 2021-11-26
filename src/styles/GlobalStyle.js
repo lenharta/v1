@@ -18,14 +18,48 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     text-decoration: none;
+    color: var(--orange);
     font-family: var(--font-link);
-    color: var(--text-heading);
     font-weight: 400;
 
     &:hover {
       color: var(--orange);
-      transition: var(--transition-link);
     }
+  }
+
+  h1 {
+    color: var(--text-heading);
+    font-size: var(--heading-xlg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  h2 {
+    color: var(--text);
+    font-size: var(--heading-lg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--text-heading);
+    font-size: var(--heading-sm);
+    font-family: var(--font-heading);
+    font-weight: 400;
+  }
+
+  p {
+    color: var(--text);
+    font-size: var(--text-md);
+    font-family: var(--font-text);
+    font-weight: 400;
+  }
+
+  span {
+    color: var(--orange);
+    font-size: var(--text-lg);
+    font-family: var(--font-link);
+    font-weight: 300;
   }
 
   // Scroll Bar
@@ -51,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
     margin: 0;
-    padding: .8rem;
+    padding: 10px 20px;
     border-radius: var(--border-radius);
     border: var(--btn-border);
     background: none;
@@ -64,6 +98,11 @@ const GlobalStyle = createGlobalStyle`
       background-color: var(--orange-tint);
       transition: var(--transiton);
     }
+  }
+
+  // Class Templates
+  .section__heading {
+
   }
 `
 
