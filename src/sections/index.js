@@ -4,3 +4,6 @@ export { default as Featured } from '../sections/Featured';
 export { default as Experience } from '../sections/Experience';
 export { default as Archive } from '../sections/Archive';
 export { default as CTA } from '../sections/CTA';
+export { default as Nav } from '../sections/Nav';
+export { default as ToTop } from '../sections/ToTop';
+export { default as Footer } from '../sections/Footer';

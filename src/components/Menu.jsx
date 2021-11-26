@@ -7,14 +7,6 @@ const StyledLinks = styled.div`
   p {
     margin: 1rem 1.5rem;
   }
-
-  a {
-    color: var(--reg-text);
-
-    &:hover {
-      color: var(--orange);
-    }
-  }
 `;
 
 const Menu = () => {

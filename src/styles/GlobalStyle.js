@@ -15,7 +15,20 @@ const GlobalStyle = createGlobalStyle`
     background: var(--bg-navy);
   }
 
-  /* Scroll Bar */
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-link);
+    color: var(--text-heading);
+    font-weight: 400;
+
+    &:hover {
+      color: var(--orange);
+      transition: var(--transition-link);
+    }
+  }
+
+  // Scroll Bar
 
   html {
     scrollbar-width: thin;
@@ -33,12 +46,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
   }
 
-  a {
-    cursor: pointer;
-    text-decoration: none;
-    font-family: var(--font-roboto);
-    font-weight: 700;
-  }
+  // Button Style
 
   button {
     cursor: pointer;

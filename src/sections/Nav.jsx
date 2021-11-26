@@ -1,41 +1,27 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Menu } from '.';
+import { Menu } from '../components';
 import { brandLogo } from '../assets/logos';
 
 const StyledHeader = styled.header`
   display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  height: var(--nav-height);
-  width: 100%;
-  background: var(--bg-tint);
-  backdrop-filter: blur(10px);
-`;
 
-const StyledLogoContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex: 1;
-  
   img {
     height: 50px;
     width: 50px;
   }
 `;
 
+const StyledLogoContainer = styled.div`
+  
+`;
+
 const StyledLinksContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  flex: 4;
+  
 `;
 
 const StyledButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex: 1;
+  
 `;
 
 const Nav = () => {
