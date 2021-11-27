@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 const Main = styled.main`
   padding: 0 150px;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1080px) {
     padding: 0 100px;
@@ -22,14 +24,14 @@ const Layout = () => {
   return (
     <>
       <Main>
-        <Hero />
-        <About />
-        <Featured />
-        <Experience />
-        <Archive />
-        <CTA />
-        <ToTop />
-        <Footer />
+        {/* <Hero /> */}
+        {/* <About /> */}
+        {/* <Featured /> */}
+        {/* <Experience /> */}
+        {/* <Archive /> */}
+        {/* <CTA /> */}
+        {/* <ToTop /> */}
+        {/* <Footer /> */}
       </Main>
     </>
   )

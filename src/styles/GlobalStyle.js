@@ -49,10 +49,8 @@ const GlobalStyle = createGlobalStyle`
     border-radius: var(--border-radius);
     border: var(--btn-border);
     background: none;
-
-    a {
-      color: var(--orange);
-    }
+    color: var(--orange);
+    font-family: var(--font-link);
 
     &:hover {
       background-color: var(--orange-tint);
@@ -65,22 +63,44 @@ const GlobalStyle = createGlobalStyle`
     margin: 100px auto;
   }
 
-    // Headings
-    .big__heading {
-      color: var(--text-heading);
-      margin: 0;
-      font-size: clamp(40px, 8vw, 60px);
-      font-family: var(--font-heading);
-      font-weight: 700;
-    }
+  // Logos
+  .logo {
+    display: flex;
+    width: 100%;
 
-    .medium__heading {
-      color: var(--text);
-      margin: 0;
-      font-size: clamp(40px, 8vw, 60px);
-      font-family: var(--font-heading);
-      font-weight: 700;
+    a {
+      width: 45px;
+      height: 45px;
+
+    svg {
+      display: flex;
+      width: 45px;
+      height: 45px;
+      }
     }
+  }
+  
+  // Headings
+  .big__heading {
+    color: var(--text-heading);
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  .medium__heading {
+    color: var(--text);
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+
+  // Box Shadows
+  .nav__shadow {
+    box-shadow: 0 10px 30px -10px var(--x-dark-navy);
+  }
 `
 
 export default GlobalStyle;
