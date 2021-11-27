@@ -34,14 +34,13 @@ const StyledNav = styled.nav`
       display: flex;
       height: 50px;
       width: 50px;
-      img {
-        width: 50px;
-        height: 50px;
-      }
     }
 
     &:hover {
       transform: scale(var(--s-scale));
+      svg {
+        fill-opacity: var(--orange-tint);
+      }
     }
   }
 `;
@@ -59,7 +58,7 @@ const StyledLinks = styled.div`
     margin-right: 15px;
     li {
       list-style: none;
-      margin-right: 20px;
+      margin-right: 25px;
       a {
         color: var(--text);
         padding: 5px 0;
@@ -67,7 +66,6 @@ const StyledLinks = styled.div`
         &:hover {
           color: var(--orange);
           transition: var(--transition);
-          transform: scale(var(--s-scale));
         }
       }
     }

@@ -79,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
         transition: var(--transiton);
         transform: scale(var(--s-scale));
         a {
-          color: var(--light-orange);
+          color: var(--orange);
         }
       }
     }
