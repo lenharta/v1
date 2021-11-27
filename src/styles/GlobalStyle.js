@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body::-webkit-scrollbar-thumb {
     background-color: var(--orange);
+    opacity: 0.5;
     border: 3px solid var(--bg-navy);
     border-radius: 10px;
   }

@@ -1,4 +1,6 @@
-export { default as brandLogo } from './brandLogo.svg';
+export { default as BrandLogo } from './brandLogo';
+
+// Change to JS files as Needed // Move Above
 export { default as css3Logo } from './css3Logo.svg';
 export { default as discordLogo } from './discordLogo.svg';
 export { default as figmaLogo } from './figmaLogo.svg';

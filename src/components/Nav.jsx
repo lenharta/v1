@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Menu } from '.';
-import { brandLogo } from '../assets/logos';
+import { BrandLogo } from '../assets/logos';
 import { navLinks } from '../config';
 import { usePrefersReducedMotion } from '../hooks';
 
@@ -11,9 +11,10 @@ const StyledHeader = styled.header`
   top: 0;
   padding: 0 50px;
   height: var(--nav-height);
-  background: var(--bg-navy);
+  background: var(--bg-tint);
   width: 100%;
   backdrop-filter: blur(10px);
+  z-index: 50;
 
   @media (max-width: 1080px) {
     padding: 0 40px;
@@ -27,6 +28,8 @@ const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   height: 50px;
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -62,6 +65,9 @@ const StyledLinks = styled.div`
       a {
         color: var(--text);
         padding: 5px 0;
+        &:active {
+          border-bottom: 2px solid var(--orange);
+        }
 
         &:hover {
           color: var(--orange);
@@ -78,7 +84,7 @@ const Nav = () => {
   const Logo = (
     <div className="logo">
       <a href="/" aria-label="home">
-        <img src={brandLogo} />       
+        <BrandLogo />      
       </a>
     </div>
   )
@@ -108,7 +114,9 @@ const Nav = () => {
             </>
           ) : (
             <>
+              <StyledLinks>
 
+              </StyledLinks>
             </>
           )}
         </StyledNav>

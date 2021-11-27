@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { computerSitImg } from '../assets/images';
 import { socialMedia } from '../config';
 
-const StyledButton = styled.div`
-  
-`;
-
 const StyledHero = styled.div`
-  
+  width: 100%;
+  height: 100vh;
+  color: #fff;
 `;
 
 const Hero = () => {
@@ -16,11 +14,7 @@ const Hero = () => {
   return (
     <>
       <StyledHero>
-
-
-        <StyledButton>
         
-        </StyledButton>
       </StyledHero>     
     </>
   )
