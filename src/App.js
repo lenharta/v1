@@ -1,15 +1,18 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import { Layout, Social, Contact, Nav } from './components'
-import { GlobalStyle } from './styles'
+import { GlobalStyle, theme } from './styles'
 
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Nav />
-      <Layout />
-      {/* <Social />
-      <Contact /> */}
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Nav />
+        <Layout />
+        {/* <Social />
+        <Contact /> */}
+      </ThemeProvider>
     </>
   )
 }

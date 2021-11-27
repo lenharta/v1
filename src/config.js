@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       name: 'Contact',
-      url: '/#CTA',
+      url: '/#contact',
     },
   ],
 

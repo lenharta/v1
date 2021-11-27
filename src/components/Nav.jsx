@@ -6,55 +6,72 @@ import { navLinks } from '../config';
 import { usePrefersReducedMotion } from '../hooks';
 
 const StyledHeader = styled.header`
-  display: flex;
+  ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
-  align-items: center;
   top: 0;
   padding: 0 50px;
   height: var(--nav-height);
   background: var(--bg-navy);
   width: 100%;
   backdrop-filter: blur(10px);
+
+  @media (max-width: 1080px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
 `;
 
 const StyledNav = styled.nav`
-  display: flex;
-  align-items: center;
-  height: 75px;
-  width: 100%;
+  ${({ theme }) => theme.mixins.flexBetween};
+  height: 50px;
   margin: 0;
+  width: 100%;
 
   .logo {
-    display: flex;
-
+    ${({ theme }) => theme.mixins.flexCenter};
     a {
-      width: 45px;
-      height: 45px;
-
-      svg {
-        fill: var(--orange);
+      display: flex;
+      height: 50px;
+      width: 50px;
+      img {
+        width: 50px;
+        height: 50px;
       }
-    } 
+    }
+
+    &:hover {
+      transform: scale(var(--s-scale));
+    }
   }
 `;
 
 const StyledLinks = styled.div`
-  display: flex;
-  align-items: center;
-  
-  a {
-    color: var(--text);
-    padding: 0 15px;
+  ${({ theme }) => theme.mixins.flexEnd};
+  height: 50px;
 
-    &:hover {
-      color: var(--orange);
-      transition: var(--transition);
-    }
+  @media (max-width: 768px) {
+    display: none;
   }
+  
+  ol {
+    display: flex;
+    margin-right: 15px;
+    li {
+      list-style: none;
+      margin-right: 20px;
+      a {
+        color: var(--text);
+        padding: 5px 0;
 
-  button {
-    color: var(--orange);
-    margin-left: 15px;
+        &:hover {
+          color: var(--orange);
+          transition: var(--transition);
+          transform: scale(var(--s-scale));
+        }
+      }
+    }
   }
 `;
 
@@ -64,13 +81,15 @@ const Nav = () => {
   const Logo = (
     <div className="logo">
       <a href="/" aria-label="home">
-        <svg src={brandLogo} />       
+        <img src={brandLogo} />       
       </a>
     </div>
   )
 
   const Resume = (
-    <button href="#">Resume</button>
+    <div className="resume__button">
+      <button href="#"><a>Resume</a></button>
+    </div>
   )
 
   return (
@@ -84,10 +103,10 @@ const Nav = () => {
               <StyledLinks>
                 <ol>
                   {navLinks.map(({ name, url }, i) => (
-                      <a key={i} href={url}>{name}</a>
+                      <li key={i}><a href={url}>{name}</a></li>
                     ))}
                 </ol>
-                <div>{Resume}</div>
+                {Resume}
               </StyledLinks>
             </>
           ) : (

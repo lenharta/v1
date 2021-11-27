@@ -22,8 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-  // Scroll Bar
-
+// Scroll Bar
   html {
     scrollbar-width: thin;
     scrollbar-color: var(--orange);
@@ -40,17 +39,20 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
   }
 
-  // Button Style
-
+// Button Style
   button {
     cursor: pointer;
     margin: 0;
-    padding: 10px 20px;
+    padding: 7.5px 15px;
     border-radius: var(--border-radius);
     border: var(--btn-border);
     background: none;
     color: var(--orange);
     font-family: var(--font-link);
+
+    a {
+      color: var(--orange);
+    }
 
     &:hover {
       background-color: var(--orange-tint);
@@ -58,29 +60,37 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  // Templates
-  .section {
-    margin: 100px auto;
-  }
+  .resume__button {
+    button {
+      cursor: pointer;
+      margin: 0;
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      border: var(--btn-border);
+      background: none;
+      color: var(--orange);
+      font-family: var(--font-link);
+      a {
+        color: var(--orange);
+      }
 
-  // Logos
-  .logo {
-    display: flex;
-    width: 100%;
-
-    a {
-      width: 45px;
-      height: 45px;
-
-    svg {
-      display: flex;
-      width: 45px;
-      height: 45px;
+      &:hover {
+        background-color: var(--orange-tint);
+        transition: var(--transiton);
+        transform: scale(var(--s-scale));
+        a {
+          color: var(--light-orange);
+        }
       }
     }
   }
+
+// Templates
+  .section {
+    margin: 100px auto;
+  }
   
-  // Headings
+// Headings
   .big__heading {
     color: var(--text-heading);
     margin: 0;
@@ -97,7 +107,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
 
-  // Box Shadows
+// Box Shadows
   .nav__shadow {
     box-shadow: 0 10px 30px -10px var(--x-dark-navy);
   }

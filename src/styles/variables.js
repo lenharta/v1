@@ -15,6 +15,7 @@ const variables = css`
     --bg-navy: #161C27;
     --bg-tint: rgba(22, 28, 39, 0.75);
 
+    --light-orange: #E79649;
     --orange: #E38229;
     --orange-tint: rgba(227, 130, 41, 0.2);
 
@@ -32,12 +33,7 @@ const variables = css`
     // Transitions
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition-link: ease .3s;
-
-    // Icons
-    --lg-icon-height: 40px;
-    --lg-icon-width: 40px;
-    --sm-icon-height: 20px;
-    --sm-icon-width: 20px;
+    --s-scale: 1.025;
   }
 `;
 
