@@ -18,29 +18,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     text-decoration: none;
-    color: var(--orange);
     font-family: var(--font-link);
     font-weight: 400;
-
-    &:hover {
-      color: var(--orange);
-    }
-  }
-
-  .big__heading {
-    color: var(--text-heading);
-    margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
-    font-family: var(--font-heading);
-    font-weight: 700;
-  }
-
-  .medium__heading {
-    color: var(--text);
-    margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
-    font-family: var(--font-heading);
-    font-weight: 700;
   }
 
   // Scroll Bar
@@ -81,14 +60,27 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  // Class Templates
-  .section__heading {
-
-  }
-
+  // Templates
   .section {
-    
+    margin: 100px auto;
   }
+
+    // Headings
+    .big__heading {
+      color: var(--text-heading);
+      margin: 0;
+      font-size: clamp(40px, 8vw, 60px);
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    .medium__heading {
+      color: var(--text);
+      margin: 0;
+      font-size: clamp(40px, 8vw, 60px);
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
 `
 
 export default GlobalStyle;

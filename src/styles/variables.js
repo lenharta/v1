@@ -8,6 +8,8 @@ const variables = css`
     --font-link: 'Fira Code', monospace; // 300 400
 
     // Colors
+    --dark-navy: #1B1A22;
+    --navy-shadow: rgba(27, 26, 34, 0.7)
     --light-navy: #242C3D;
     --bg-navy: #161C27;
     --bg-tint: rgba(22, 28, 39, 0.75);
@@ -22,7 +24,9 @@ const variables = css`
     --border-radius: 4px;
     --lg-border: solid 8px #242C3D;
     --btn-border: solid 1px #E38229;
+
     --nav-height: 100px;
+    --nav-scroll-height: 70px;
 
     // Transitions
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
