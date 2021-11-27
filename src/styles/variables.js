@@ -18,6 +18,8 @@ const variables = css`
     --light-orange: #E79649;
     --orange: #E38229;
     --orange-tint: rgba(227, 130, 41, 0.2);
+    --dark-orange: #E36929;
+    --gradient-text: linear-gradient(89.97deg, #E38229 1.84%, #E36929 102.67%);
 
     --text: #7A90BB;
     --text-heading: #9AB7EF;
@@ -29,6 +31,8 @@ const variables = css`
 
     --nav-height: 100px;
     --nav-scroll-height: 70px;
+
+    --gradient-bar: linear-gradient(103.22deg, #E38229 -13.86%, #E36929 99.55%);
 
     // Transitions
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

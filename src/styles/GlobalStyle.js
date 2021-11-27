@@ -111,6 +111,15 @@ const GlobalStyle = createGlobalStyle`
   .nav__shadow {
     box-shadow: 0 10px 30px -10px var(--x-dark-navy);
   }
+
+// Gradient Text
+  .gradient__heading {
+    color: var(--gradient-text);
+  }
+
+  .gradient__bar {
+    background: var(--gradient-bar);
+  }
 `
 
 export default GlobalStyle;

@@ -26,7 +26,6 @@ const StyledHeader = styled.header`
 const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   height: 50px;
-  margin: 0;
   width: 100%;
 
   .logo {
