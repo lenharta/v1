@@ -18,6 +18,12 @@ const mixins = {
     justify-content: flex-end;
     align-items: center;
   `,
+
+  flexStart: css`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  `,  
 };
 
 export default mixins;
