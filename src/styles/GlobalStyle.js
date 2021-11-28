@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
     background: none;
     color: var(--orange);
     font-family: var(--font-link);
-
     a {
       color: var(--orange);
     }

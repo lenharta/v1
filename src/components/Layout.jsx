@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { About, Archive, CTA, Experience, Featured, Footer, Hero, ToTop } from '../sections'
 import styled from 'styled-components'
 
-const Main = styled.main`
+const StyledMain = styled.main`
   padding: 0 150px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ const Main = styled.main`
 const Layout = () => {
   return (
     <>
-      <Main>
+      <StyledMain>
         <Hero />
         {/* <About /> */}
         {/* <Featured /> */}
@@ -35,7 +35,7 @@ const Layout = () => {
         {/* <CTA /> */}
         {/* <ToTop /> */}
         {/* <Footer /> */}
-      </Main>
+      </StyledMain>
     </>
   )
 }

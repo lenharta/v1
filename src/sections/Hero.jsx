@@ -6,7 +6,6 @@ import { socialMedia } from '../config';
 const StyledHero = styled.div`
   width: 100%;
   height: 100vh;
-  color: #fff;
 `;
 
 const Hero = () => {

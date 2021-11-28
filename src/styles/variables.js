@@ -10,7 +10,7 @@ const variables = css`
     // Colors
     --x-dark-navy: #0e1219;
     --dark-navy: #1B1A22;
-    --navy-shadow: rgba(14, 18, 25, 0.7)
+    --navy-shadow: rgba(14, 18, 25, 0.7);
     --light-navy: #242C3D;
     --bg-navy: #161C27;
     --bg-tint: rgba(22, 28, 39, 0.75);
