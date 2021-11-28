@@ -21,8 +21,8 @@ const variables = css`
     --dark-orange: #E36929;
     --gradient-text: linear-gradient(89.97deg, #E38229 1.84%, #E36929 102.67%);
 
-    --text: #7A90BB;
-    --text-heading: #9AB7EF;
+    --text: #8892B0;
+    --text-heading: #CCD6F6;
 
     // Reused
     --border-radius: 4px;

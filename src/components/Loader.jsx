@@ -8,7 +8,7 @@ const StyledLoader = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   background: var(--x-dark-navy);
   z-index: 200;
 
@@ -18,72 +18,86 @@ const StyledLoader = styled.div`
     transition: var(--transition);
     opacity: ${props => (props.isMounted ? 1 : 0)};
     svg {
-      display: block;
       width: 100%;
       height: 100%;
-      margin: 0 auto;
+      margin: 0 auto 25px;
     }
+  }
+
+  .title__container {
+    ${({ theme }) => theme.mixins.flexCenter};
+    flex-direction: column;
+    max-width: 300px;
   }
 
   .loading__title {
     ${({ theme }) => theme.mixins.flexCenter};
-    margin-top: 20px;
     font-family: var(--font-link);
-    font-size: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: bold;
     color: var(--orange);
+    margin-top: 5px;
     width: 100%;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+
+    &:last-child {
+      font-weight: 800;
+      font-size: 22px;
+    }
   }
 `;
 
 const Loader = () => {
   const [isMounted, setIsMounted] = useState(false);
 
+  // https://animejs.com/documentation/
   const animate = () => {
     const loader = anime.timeline({
-      duration: 6000,
+      duration: 6400,
     });
   
     loader
+      // Loading Logo Animation
+      .add({
+        targets: '#logo',
+        delay: 500,
+        duration: 1750,
+        rotateY: 360,
+      })
+      
+      .add({
+        targets: '#logo',
+        delay: 50,
+        duration: 1750,
+        rotateX: 360,
+      })
+      
+      .add({
+        targets: '#logo',
+        delay: 50,
+        duration: 1750,
+        rotate: 360,
+      })
 
-    
-    // Loading Logo
-    .add({
-      targets: '#logo',
-      delay: 400,
-      duration: 1750,
-      rotateY: 360,
-    })
-    
-    .add({
-      targets: '#logo',
-      delay: 50,
-      duration: 1750,
-      rotateX: 360,
-    })
-    
-    .add({
-      targets: '#logo',
-      delay: 50,
-      duration: 1750,
-      rotate: 360,
-    })
-    
-    .add({
-      targets: '#logo',
-      duration: 400,
-      easing: 'easeInOutQuart',
-      opacity: 0,
-      scale: 0.1,
-    })
+      //Loading Logo Disappear
+      .add({
+        targets: '#logo',
+        duration: 400,
+        easing: 'easeInOutQuart',
+        opacity: 0,
+        scale: 0.1,
+      })
 
-    .add({
-      targets: '.loading__title',
-      duration: 400,
-      easing: 'easeInOutQuart',
-      opacity: 0,
-      scale: 0.1,
-    })
+      // Title Disappear
+      .add({
+        targets: '.loading__title',
+        duration: 400,
+        easing: 'easeInOutQuart',
+        opacity: 0,
+        scale: 0.1,
+      })
   };
 
   useEffect(() => {
@@ -97,8 +111,9 @@ const Loader = () => {
       <div className="logo__wrapper">
         <BrandLoader />
       </div>
-      <div>
-        <span className="loading__title">WELCOME!</span>
+      <div className="title__container">
+        <span className="loading__title">DESIGNED & BUILT BY</span>
+        <span className="loading__title">ANDREW LENHART</span>
       </div> 
     </StyledLoader>
   )
