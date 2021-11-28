@@ -5,17 +5,17 @@ import { BrandLoader } from '../assets/logos';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
+  max-width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  max-width: 100%;
   background: var(--x-dark-navy);
   z-index: 200;
 
   .logo__wrapper {
     max-width: 150px;
-    background: var(--x-dark-navy);
     transition: var(--transition);
+    background: var(--x-dark-navy);
     opacity: ${props => (props.isMounted ? 1 : 0)};
     svg {
       width: 100%;
@@ -26,25 +26,26 @@ const StyledLoader = styled.div`
 
   .title__container {
     ${({ theme }) => theme.mixins.flexCenter};
-    flex-direction: column;
     max-width: 300px;
+    transition: var(--transition);
+    flex-direction: column;
   }
 
   .loading__title {
     ${({ theme }) => theme.mixins.flexCenter};
+    width: 100%;
     font-family: var(--font-link);
-    text-align: center;
     font-size: 16px;
     font-weight: 400;
     font-style: bold;
+    text-align: center;
     color: var(--orange);
     margin-top: 5px;
-    width: 100%;
     letter-spacing: 5px;
 
     &:last-child {
-      font-weight: 800;
       font-size: 22px;
+      font-weight: 800;
     }
   }
 `;
@@ -55,14 +56,14 @@ const Loader = () => {
   // https://animejs.com/documentation/
   const animate = () => {
     const loader = anime.timeline({
-      duration: 6400,
+      duration: 6350,
     });
   
     loader
       // Loading Logo Animation
       .add({
         targets: '#logo',
-        delay: 500,
+        delay: 600,
         duration: 1750,
         rotateY: 360,
       })
