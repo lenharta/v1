@@ -65,9 +65,6 @@ const StyledLinks = styled.div`
       a {
         color: var(--text);
         padding: 5px 0;
-        &:active {
-          border-bottom: 2px solid var(--orange);
-        }
         &:hover {
           color: var(--orange);
           transition: var(--transition);

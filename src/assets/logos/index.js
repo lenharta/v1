@@ -1,4 +1,5 @@
 export { default as BrandLogo } from './brandLogo';
+export { default as BrandLoader } from './brandLoader';
 
 // Change to JS files as Needed // Move Above
 export { default as css3Logo } from './css3Logo.svg';
