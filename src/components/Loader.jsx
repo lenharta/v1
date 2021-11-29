@@ -48,24 +48,6 @@ const StyledLoader = styled.div`
       }
     }
   }
-
-  /* .loading__title {
-    ${({ theme }) => theme.mixins.flexCenter};
-    width: 100%;
-    font-family: var(--font-link);
-    font-size: 16px;
-    font-weight: 400;
-    font-style: bold;
-    text-align: center;
-    color: var(--orange);
-    margin-top: 5px;
-    letter-spacing: 5px;
-
-    &:last-child {
-      font-size: 22px;
-      font-weight: 800;
-    }
-  } */
 `;
 
 const Loader = () => {
@@ -73,11 +55,10 @@ const Loader = () => {
   const fadeUpLoader = 'fadeuploader';
   const Logo = '#logo';
 
+
   // https://animejs.com/documentation/
   const animate = () => {
-    const loader = anime.timeline({
-      // duration: 5000,
-    });
+    const loader = anime.timeline({});
   
     loader
       // Loading Logo Animation
@@ -110,22 +91,15 @@ const Loader = () => {
         opacity: 0,
         scale: 0.1,
       })
-
-      // // Title Disappear
-      // .add({
-      //   targets: 'title__container',
-      //   duration: 300,
-      //   easing: 'easeInOutQuart',
-      //   opacity: 0,
-      //   scale: 0.1,
-      // })
   };
 
+  // Mounted Timeout
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 300);
     animate();
     return () => clearTimeout(timeout);
   }, [])
+
 
   return (
     <StyledLoader isMounted={isMounted} id="remove">
@@ -147,9 +121,4 @@ const Loader = () => {
 }
 
 export default Loader
-
-{/* <div className="title__container">
-        <span className="loading__title">DESIGNED & BUILT BY</span>
-        <span className="loading__title">ANDREW LENHART</span>
-      </div> */}
 
