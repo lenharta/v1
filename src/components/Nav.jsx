@@ -95,6 +95,7 @@ const Nav = () => {
   const timeout = loaderDelay;
   const fadeClass = 'fade';
   const fadeDownClass = 'fadedown';
+  const fadeSideClass = 'fadeside';
 
   const Logo = (
     <div className="logo">
@@ -143,9 +144,8 @@ const Nav = () => {
                 <ol>
                   <TransitionGroup component={null}>
                     {isMounted &&
-                      navLinks &&
                       navLinks.map(({ name, url }, i) => (
-                        <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                        <CSSTransition classNames={fadeSideClass} timeout={timeout}>
                           <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
                             <a href={url}>{name}</a>
                           </li>
@@ -155,7 +155,7 @@ const Nav = () => {
                 </ol>
                 <TransitionGroup component={null}>
                   {isMounted && (
-                    <CSSTransition classNames={fadeDownClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
+                    <CSSTransition classNames={fadeSideClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
                       {Resume}
                     </CSSTransition>
                   )}

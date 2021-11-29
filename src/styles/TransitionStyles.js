@@ -18,12 +18,12 @@ const TransitionStyles = css`
   /* Fade Side */
   .fadeside-enter {
     opacity: 0.01;
-    transform: translateY(20px);
+    transform: translateX(200px);
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
   .fadeside-enter-active {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
