@@ -4,6 +4,7 @@ import TransitionStyles from './TransitionStyles';
 
 const GlobalStyle = createGlobalStyle`
   ${variables};
+  ${TransitionStyles};
   
   * {
     margin: 0;
@@ -122,7 +123,6 @@ const GlobalStyle = createGlobalStyle`
     background: var(--gradient-bar);
   }
 
-  ${TransitionStyles};
 `
 
 export default GlobalStyle;

@@ -10,7 +10,7 @@ const App = () => {
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
-    }, 6600)
+    }, 5900)
   }, [])
 
   return (

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { BrandLoader } from '../assets/logos'
 import anime from 'animejs'
-import { BrandLoader } from '../assets/logos';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -29,9 +30,26 @@ const StyledLoader = styled.div`
     max-width: 300px;
     transition: var(--transition);
     flex-direction: column;
+    span {
+      ${({ theme }) => theme.mixins.flexCenter};
+      width: 100%;
+      font-family: var(--font-link);
+      font-size: 16px;
+      font-weight: 400;
+      font-style: bold;
+      text-align: center;
+      color: var(--orange);
+      margin-top: 5px;
+      letter-spacing: 5px;
+
+      &:last-child {
+        font-size: 22px;
+        font-weight: 800;
+      }
+    }
   }
 
-  .loading__title {
+  /* .loading__title {
     ${({ theme }) => theme.mixins.flexCenter};
     width: 100%;
     font-family: var(--font-link);
@@ -47,77 +65,91 @@ const StyledLoader = styled.div`
       font-size: 22px;
       font-weight: 800;
     }
-  }
+  } */
 `;
 
 const Loader = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const fadeUpLoader = 'fadeuploader';
+  const Logo = '#logo';
 
   // https://animejs.com/documentation/
   const animate = () => {
     const loader = anime.timeline({
-      duration: 6350,
+      // duration: 5000,
     });
   
     loader
       // Loading Logo Animation
       .add({
-        targets: '#logo',
-        delay: 600,
-        duration: 1750,
+        targets: Logo,
+        delay: 500,
+        duration: 1900,
         rotateY: 360,
       })
       
       .add({
-        targets: '#logo',
+        targets: Logo,
         delay: 50,
-        duration: 1750,
+        duration: 1900,
         rotateX: 360,
       })
       
       .add({
-        targets: '#logo',
+        targets: Logo,
         delay: 50,
-        duration: 1750,
+        duration: 1500,
         rotate: 360,
       })
 
       //Loading Logo Disappear
       .add({
-        targets: '#logo',
-        duration: 400,
+        targets: [Logo, '#remove'],
+        duration: 300,
         easing: 'easeInOutQuart',
         opacity: 0,
         scale: 0.1,
       })
 
-      // Title Disappear
-      .add({
-        targets: '.loading__title',
-        duration: 400,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        scale: 0.1,
-      })
+      // // Title Disappear
+      // .add({
+      //   targets: 'title__container',
+      //   duration: 300,
+      //   easing: 'easeInOutQuart',
+      //   opacity: 0,
+      //   scale: 0.1,
+      // })
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 500);
+    const timeout = setTimeout(() => setIsMounted(true), 300);
     animate();
     return () => clearTimeout(timeout);
   }, [])
 
   return (
-    <StyledLoader isMounted={isMounted}>
+    <StyledLoader isMounted={isMounted} id="remove">
       <div className="logo__wrapper">
         <BrandLoader />
       </div>
-      <div className="title__container">
-        <span className="loading__title">DESIGNED & BUILT BY</span>
-        <span className="loading__title">ANDREW LENHART</span>
-      </div> 
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeUpLoader} >
+              <div className="title__container">
+                <span>DESIGNED & BUILT BY</span>
+                <span>ANDREW LENHART</span>
+              </div>
+            </CSSTransition>
+          )}
+        </TransitionGroup>
     </StyledLoader>
   )
 }
 
 export default Loader
+
+{/* <div className="title__container">
+        <span className="loading__title">DESIGNED & BUILT BY</span>
+        <span className="loading__title">ANDREW LENHART</span>
+      </div> */}
+

@@ -66,6 +66,24 @@ const TransitionStyles = css`
     opacity: 0;
     transition: opacity 300ms var(--easing);
   }
+
+  /* Fade up for Loader*/
+  .fadeuploader-enter {
+    opacity: 0.01;
+    transform: translateY(200px);
+  }
+  .fadeuploader-enter-active {
+    opacity: 1;
+    transition: opacity 700ms var(--easing), transform 700ms var(--easing);
+  }
+  .fadeuploader-exit {
+    opacity: 1;
+    transform: translateY(-2000px);
+  }
+  .fadeuploader-exit-active {
+    opacity: 0;
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
 `;
 
 export default TransitionStyles;
