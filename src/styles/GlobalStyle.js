@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import variables from "./variables";
+import TransitionStyles from './TransitionStyles';
 
 const GlobalStyle = createGlobalStyle`
   ${variables};
@@ -120,6 +121,8 @@ const GlobalStyle = createGlobalStyle`
   .gradient__bar {
     background: var(--gradient-bar);
   }
+
+  ${TransitionStyles};
 `
 
 export default GlobalStyle;

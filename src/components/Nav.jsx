@@ -1,8 +1,10 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Menu } from '.';
 import { BrandLogo } from '../assets/logos';
 import { navLinks } from '../config';
+import { loaderDelay } from '../utils';
 import { usePrefersReducedMotion } from '../hooks';
 
 const StyledHeader = styled.header`
@@ -32,7 +34,7 @@ const StyledNav = styled.nav`
   margin: 0 auto;
 
   .logo {
-    ${({ theme }) => theme.mixins.flexCenter};
+    ${({ theme }) => theme.mixins.flexStart};
     a {
       display: flex;
       height: 50px;
@@ -75,7 +77,24 @@ const StyledLinks = styled.div`
 `;
 
 const Nav = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [])
+
+  const timeout = loaderDelay;
+  const fadeClass = 'fade';
+  const fadeDownClass = 'fadedown';
 
   const Logo = (
     <div className="logo">
@@ -102,7 +121,9 @@ const Nav = () => {
               <StyledLinks>
                 <ol>
                   {navLinks.map(({ name, url }, i) => (
-                      <li key={i}><a href={url}>{name}</a></li>
+                      <li key={i}>
+                        <a href={url}>{name}</a>
+                      </li>
                     ))}
                 </ol>
                 {Resume}
@@ -110,8 +131,35 @@ const Nav = () => {
             </>
           ) : (
             <>
-              <StyledLinks>
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeClass} timeout={timeout}>
+                    {Logo}
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
 
+              <StyledLinks>
+                <ol>
+                  <TransitionGroup component={null}>
+                    {isMounted &&
+                      navLinks &&
+                      navLinks.map(({ name, url }, i) => (
+                        <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                          <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
+                            <a href={url}>{name}</a>
+                          </li>
+                        </CSSTransition>
+                    ))}
+                  </TransitionGroup>
+                </ol>
+                <TransitionGroup component={null}>
+                  {isMounted && (
+                    <CSSTransition classNames={fadeDownClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
+                      {Resume}
+                    </CSSTransition>
+                  )}
+                </TransitionGroup>
               </StyledLinks>
             </>
           )}

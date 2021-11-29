@@ -37,6 +37,7 @@ const variables = css`
     // Transitions
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition-link: ease .3s;
+    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --s-scale: 1.025;
   }
 `;
