@@ -79,6 +79,9 @@ const StyledLinks = styled.div`
 const Nav = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const timeout = loaderDelay;
+  const fadeSideLClass = 'fadesidel';
+  const fadeSideRClass = 'fadesider';
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -92,10 +95,6 @@ const Nav = () => {
     return () => clearTimeout(timeout);
   }, [])
 
-  const timeout = loaderDelay;
-  const fadeClass = 'fade';
-  const fadeDownClass = 'fadedown';
-  const fadeSideClass = 'fadeside';
 
   const Logo = (
     <div className="logo">
@@ -134,7 +133,7 @@ const Nav = () => {
             <>
               <TransitionGroup component={null}>
                 {isMounted && (
-                  <CSSTransition classNames={fadeClass} timeout={timeout}>
+                  <CSSTransition classNames={fadeSideLClass} timeout={timeout}>
                     {Logo}
                   </CSSTransition>
                 )}
@@ -145,18 +144,25 @@ const Nav = () => {
                   <TransitionGroup component={null}>
                     {isMounted &&
                       navLinks.map(({ name, url }, i) => (
-                        <CSSTransition classNames={fadeSideClass} timeout={timeout}>
-                          <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
-                            <a href={url}>{name}</a>
-                          </li>
+                        <CSSTransition 
+                          classNames={fadeSideRClass} 
+                          timeout={timeout}
+                          >
+                            <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
+                              <a href={url}>{name}</a>
+                            </li>
                         </CSSTransition>
                     ))}
                   </TransitionGroup>
                 </ol>
                 <TransitionGroup component={null}>
                   {isMounted && (
-                    <CSSTransition classNames={fadeSideClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
-                      {Resume}
+                    <CSSTransition 
+                      classNames={fadeSideRClass} 
+                      timeout={timeout} 
+                      style={{ transitionDelay: `${navLinks.length * 50}ms` }}
+                      >
+                        {Resume}
                     </CSSTransition>
                   )}
                 </TransitionGroup>

@@ -15,13 +15,25 @@ const TransitionStyles = css`
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
-  /* Fade Side */
-  .fadeside-enter {
+  /* Fade Side from Right */
+  .fadesider-enter {
     opacity: 0.01;
     transform: translateX(200px);
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
-  .fadeside-enter-active {
+  .fadesider-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+
+  /* Fade Side from Left */
+  .fadesidel-enter {
+    opacity: 0.01;
+    transform: translateX(-200px);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+  .fadesidel-enter-active {
     opacity: 1;
     transform: translateX(0px);
     transition: opacity 300ms var(--easing), transform 300ms var(--easing);
