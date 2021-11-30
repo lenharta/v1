@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
   padding: 0 50px;
   height: var(--nav-height);
   width: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(22, 28, 39, .75) 0%, rgba(14, 18, 25, .75) 100%);
   backdrop-filter: blur(10px);
   z-index: 50;
 
@@ -111,7 +112,7 @@ const Nav = () => {
 
   return (
     <>
-      <StyledHeader className="nav__shadow bg__gradient">
+      <StyledHeader className="nav__shadow">
         <StyledNav>
           {prefersReducedMotion ? (
             <>

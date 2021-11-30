@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { ComputerSitImg } from '../assets';
 import { usePrefersReducedMotion } from '../hooks';
+import { navbarDelay } from '../utils';
 
 const StyledHero = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -53,6 +55,9 @@ const StyledInnerTitle = styled.div`
             ${({ theme }) => theme.mixins.smallButton};
             margin-top: 40px;
             padding: 15px 45px;
+            &:hover {
+              transform: scale(var(--s-scale));
+              }
             }
 
 `;
@@ -61,7 +66,7 @@ const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  const one = <h1 className="gradient__text">Hi, my Name is</h1>
+  const one = <h1 className="gradient__text">Hello, my Name is</h1>
   const two = <h2 className="gradient__text">Andrew Lenhart</h2>
   const three = <h3>I'm a Frontend Developer</h3>
   const four = (
@@ -73,7 +78,7 @@ const Hero = () => {
       </p>
     </>
   )
-
+  
   const five = (
     <button className="mail__to-button">
       <a href="mailto:andrew.code21@gmail.com">
@@ -83,6 +88,15 @@ const Hero = () => {
   )
   
   const items = [one, two, three, four, five]
+  
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const timeout = setTimeout(() => setIsMounted(true), navbarDelay);
+    return () => clearTimeout(timeout);
+  }, [])
 
   return (
     <>
@@ -97,7 +111,16 @@ const Hero = () => {
           </>
         ) : (
           <>
-          
+            <StyledInnerTitle>
+              <TransitionGroup component={null}>
+                {isMounted && 
+                  items.map((item, i) => (
+                  <CSSTransition key={i} classNames="fadeup" timeout={navbarDelay}>
+                    <div style={{ transitionDelay: `${i * 1}00ms` }}>{item}</div>
+                  </CSSTransition>
+                ))}
+              </TransitionGroup>
+            </StyledInnerTitle>
           </>
         )}
       </StyledHero>     
