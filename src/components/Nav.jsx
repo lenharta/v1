@@ -106,7 +106,7 @@ const Nav = () => {
 
   const Resume = (
     <div className="resume__button">
-      <button href="#"><a>Resume</a></button>
+      <button href="#" aria-label="view my resume"><a>Resume</a></button>
     </div>
   )
 
@@ -120,9 +120,9 @@ const Nav = () => {
 
               <StyledLinks>
                 <ol>
-                  {navLinks.map(({ name, url }, i) => (
+                  {navLinks.map(({ name, url, aria }, i) => (
                       <li key={i}>
-                        <a href={url}>{name}</a>
+                        <a aria-label={aria} href={url}>{name}</a>
                       </li>
                     ))}
                 </ol>
@@ -143,13 +143,13 @@ const Nav = () => {
                 <ol>
                   <TransitionGroup component={null}>
                     {isMounted &&
-                      navLinks.map(({ name, url }, i) => (
+                      navLinks.map(({ name, url, aria }, i) => (
                         <CSSTransition 
                           classNames={fadeSideRClass} 
                           timeout={timeout}
                           >
                             <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
-                              <a href={url}>{name}</a>
+                              <a aria-label={aria} href={url}>{name}</a>
                             </li>
                         </CSSTransition>
                     ))}

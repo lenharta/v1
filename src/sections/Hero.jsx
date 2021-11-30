@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { ComputerSitImg } from '../assets';
 import { usePrefersReducedMotion } from '../hooks';
 import { navbarDelay } from '../utils';
 
@@ -23,7 +22,7 @@ const StyledInnerTitle = styled.div`
   align-items: flex-start;
   text-align: left;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 35px;
 
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
@@ -49,12 +48,12 @@ const StyledInnerTitle = styled.div`
           color: var(--text);
           font-size: 16px;
           max-width: 540px;
-          margin-top: 20px;
+          margin-top: 15px;
           }
           button {
             ${({ theme }) => theme.mixins.smallButton};
             margin-top: 40px;
-            padding: 15px 45px;
+            padding: 15px 80px;
             &:hover {
               transform: scale(var(--s-scale));
               }

@@ -24,22 +24,27 @@ module.exports = {
     {
       name: 'About',
       url: '/#about',
+      aria: 'about',
     },
     {
       name: 'Projects',
       url: '/#projects',
+      aria: 'projects',
     },
     {
       name: 'Experience',
       url: '/#experience',
+      aria: 'experience',
     },
     {
       name: 'Archive',
       url: '/#archice',
+      aria: 'archive',
     },
     {
       name: 'Contact',
       url: '/#contact',
+      aria: 'contact',
     },
   ],
 

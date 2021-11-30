@@ -81,10 +81,7 @@ const GlobalStyle = createGlobalStyle`
         }
       }
     }
-  }
-
-// Templates
-  
+  } 
   
 // Headings
   .big__heading {
@@ -112,22 +109,23 @@ const GlobalStyle = createGlobalStyle`
   }
 
 // BG Gradient
+  // https://angrytools.com/gradient/
   .bg__gradient {
-  /* ff 3.6+ */
-  background:-moz-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    // ff 3.6+
+    background:-moz-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
-  /* safari 5.1+,chrome 10+ */
-  background:-webkit-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    // safari 5.1+,chrome 10+
+    background:-webkit-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
-  /* opera 11.10+ */
-  background:-o-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    // opera 11.10+
+    background:-o-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
-  /* ie 10+ */
-  background:-ms-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    // ie 10+
+    background:-ms-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
-  /* global 92%+ browsers support */
-  background:radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
-    }
+    // global 92%+ browsers support
+    background:radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+  }
 
 // Box Shadows
   .nav__shadow {
