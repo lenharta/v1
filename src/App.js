@@ -21,12 +21,12 @@ const App = () => {
         { isLoading ? (
           <Loader />
         ) : (
-          <>
+          <div className="bg__gradient">
             <Nav />
             <Layout />
             {/* <Social /> */}
             {/* <Email /> */}
-          </>
+          </div>
         )}
 
       </ThemeProvider>

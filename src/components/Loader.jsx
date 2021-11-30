@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { BrandLoader } from '../assets/logos'
+import { BrandLoader } from '../assets'
 import anime from 'animejs'
 
 const StyledLoader = styled.div`
@@ -106,16 +106,16 @@ const Loader = () => {
       <div className="logo__wrapper">
         <BrandLoader />
       </div>
-        <TransitionGroup component={null}>
-          {isMounted && (
-            <CSSTransition classNames={fadeUpLoader} >
-              <div className="title__container">
-                <span>DESIGNED & BUILT BY</span>
-                <span>ANDREW LENHART</span>
-              </div>
-            </CSSTransition>
-          )}
-        </TransitionGroup>
+      <TransitionGroup component={null}>
+        {isMounted && (
+          <CSSTransition classNames={fadeUpLoader} >
+            <div className="title__container">
+              <span>DESIGNED & BUILT BY</span>
+              <span>ANDREW LENHART</span>
+            </div>
+          </CSSTransition>
+        )}
+      </TransitionGroup>
     </StyledLoader>
   )
 }

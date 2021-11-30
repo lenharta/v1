@@ -19,9 +19,9 @@ const variables = css`
     --orange: #E38229;
     --orange-tint: rgba(227, 130, 41, 0.2);
     --dark-orange: #E36929;
-    --gradient-text: linear-gradient(89.97deg, #E38229 1.84%, #E36929 102.67%);
+    --gradient-text: linear-gradient(90deg, rgba(231, 150, 73, 1) 0%, rgba(227, 130, 41, 1) 42%, rgba(227, 105, 41, 1) 100%);
 
-    --text: #8892B0;
+    --text: #C0C2C4;
     --text-heading: #CCD6F6;
 
     // Reused

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Menu } from '.';
-import { BrandLogo } from '../assets/logos';
+import { BrandLogo } from '../assets';
 import { navLinks } from '../config';
 import { loaderDelay } from '../utils';
 import { usePrefersReducedMotion } from '../hooks';
@@ -13,7 +13,6 @@ const StyledHeader = styled.header`
   top: 0;
   padding: 0 50px;
   height: var(--nav-height);
-  background: var(--bg-tint);
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: 50;
@@ -112,7 +111,7 @@ const Nav = () => {
 
   return (
     <>
-      <StyledHeader className="nav__shadow">
+      <StyledHeader className="nav__shadow bg__gradient">
         <StyledNav>
           {prefersReducedMotion ? (
             <>
