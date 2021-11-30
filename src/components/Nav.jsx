@@ -63,10 +63,10 @@ const StyledLinks = styled.div`
     margin-right: 15px;
     li {
       list-style: none;
-      margin-right: 25px;
+      margin: 0 10px;
       a {
         color: var(--text);
-        padding: 5px 0;
+        padding: 10px 10px;
         &:hover {
           color: var(--orange);
           transition: var(--transition);
@@ -105,9 +105,14 @@ const Nav = () => {
   )
 
   const Resume = (
-    <div className="resume__button">
-      <button href="#" aria-label="view my resume"><a>Resume</a></button>
-    </div>
+      <a 
+        href="#" 
+        aria-label="view my resume"
+        className="resume__button"
+      >
+        Resume
+      </a>
+
   )
 
   return (

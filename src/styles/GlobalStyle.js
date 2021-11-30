@@ -52,52 +52,27 @@ const GlobalStyle = createGlobalStyle`
     background: var(--x-dark-navy);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--orange);
+    background: linear-gradient(103.22deg, #E38229 -13.86%, #E36929 99.55%);
     opacity: 0.5;
     border: 3px solid var(--x-dark-navy);
     border-radius: 10px;
   }
 
   .resume__button {
-    button {
-      cursor: pointer;
-      margin: 0;
-      padding: 12px 24px;
-      border-radius: var(--border-radius);
-      border: var(--btn-border);
-      background: none;
-      color: var(--orange);
-      font-family: var(--font-link);
-      a {
-        color: var(--orange);
-      }
-
-      &:hover {
-        background-color: var(--orange-tint);
-        transition: var(--transiton);
-        transform: scale(var(--s-scale));
-        a {
-          color: var(--orange);
-        }
-      }
-    }
+    ${({ theme }) => theme.mixins.smButton};
   } 
   
 // Headings
-  .big__heading {
-    color: var(--text-heading);
-    margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
-    font-family: var(--font-heading);
-    font-weight: 700;
+  .bigsub__heading {
+    
   }
 
-  .medium__heading {
-    color: var(--text);
-    margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
-    font-family: var(--font-heading);
-    font-weight: 700;
+  .mediumsub__heading {
+    
+  }
+
+  .sub-heading {
+
   }
 
 // Gradient Text

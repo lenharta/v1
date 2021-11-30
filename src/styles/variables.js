@@ -19,7 +19,7 @@ const variables = css`
     --orange: #E38229;
     --orange-tint: rgba(227, 130, 41, 0.2);
     --dark-orange: #E36929;
-    --gradient-text: linear-gradient(90deg, rgba(231, 150, 73, .9) 0%, rgba(227, 130, 41, 1) 42%, rgba(227, 105, 41, 1) 100%);
+    --gradient-text: linear-gradient(90deg, rgba(231, 150, 73, 1) 0%, rgba(227, 130, 41, 1) 42%, rgba(227, 105, 41, 1) 100%);
 
     --text: #C0C2C4;
     --text-heading: #CCD6F6;
@@ -27,7 +27,7 @@ const variables = css`
   // Reused
     --border-radius: 4px;
     --lg-border: solid 8px #242C3D;
-    --btn-border: solid 1px #E38229;
+    --btn-border: solid 2px #E38229;
 
     --nav-height: 100px;
     --nav-scroll-height: 70px;

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import styled from 'styled-components';
-import { usePrefersReducedMotion } from '../hooks';
-import { navbarDelay } from '../utils';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import styled from 'styled-components'
+import { ComputerSitImg } from '../assets'
+import { usePrefersReducedMotion } from '../hooks'
+import { navbarDelay } from '../utils'
 
 const StyledHero = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -22,10 +23,25 @@ const StyledInnerTitle = styled.div`
   align-items: flex-start;
   text-align: left;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 50px;
+  position: relative;
 
+  .comp-img {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    left: 700px;
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+  
   @media (max-width: 480px) and (min-height: 700px) {
-    padding-bottom: 10vh;
+    padding: 10vh 0;
   }
 
   h1 {
@@ -36,11 +52,9 @@ const StyledInnerTitle = styled.div`
     }
     h2 {
       ${({ theme }) => theme.mixins.bgHeading};
-      font-size: clamp(40px, 8vw, 80px);
       }
       h3 {
         ${({ theme }) => theme.mixins.mdHeading};
-        font-size: clamp(40px, 8vw, 60px);
         color: var(--text);
         }
         p {
@@ -50,22 +64,17 @@ const StyledInnerTitle = styled.div`
           max-width: 540px;
           margin-top: 15px;
           }
-          button {
-            ${({ theme }) => theme.mixins.smallButton};
-            margin-top: 40px;
-            padding: 15px 80px;
-            &:hover {
-              transform: scale(var(--s-scale));
-              }
-            }
-
+          a {
+            ${({ theme }) => theme.mixins.bgButton};
+            margin: 40px 0 0 0;
+          }
 `;
 
 const Hero = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const [isMounted, setIsMounted] = useState(false)
+  const prefersReducedMotion = usePrefersReducedMotion()
 
-  const one = <h1 className="gradient__text">Hello, my Name is</h1>
+  const one = <h1 className="gradient__text">Hello World, my Name is</h1>
   const two = <h2 className="gradient__text">Andrew Lenhart</h2>
   const three = <h3>I'm a Frontend Developer</h3>
   const four = (
@@ -79,11 +88,19 @@ const Hero = () => {
   )
   
   const five = (
-    <button className="mail__to-button">
-      <a href="mailto:andrew.code21@gmail.com">
+      <a 
+        aria-label="contact me" 
+        href="mailto:andrew.code21@gmail.com"
+      >
         Get In Touch!
       </a>
-    </button>
+    
+  )
+
+  const compImg = (
+    <div className="comp-img">
+      <ComputerSitImg />
+    </div>
   )
   
   const items = [one, two, three, four, five]
@@ -105,7 +122,8 @@ const Hero = () => {
             <StyledInnerTitle>
               {items.map((item, i) => (
                 <div key={i}>{item}</div>
-              ))}  
+              ))}
+              {compImg}
             </StyledInnerTitle>
           </>
         ) : (
@@ -119,6 +137,7 @@ const Hero = () => {
                   </CSSTransition>
                 ))}
               </TransitionGroup>
+              {compImg}
             </StyledInnerTitle>
           </>
         )}
