@@ -40,7 +40,7 @@ const Icons = ({ name }) => {
       return <InstagramIcon />;
     case 'JavaScript':
       return <JavascriptLogo />;
-    case 'LinkedIn':
+    case 'Linkedin':
       return <LinkedinIcon />;
     case 'React':
       return <ReactLogo />;
@@ -53,7 +53,7 @@ const Icons = ({ name }) => {
   }
 }
 
-Icon.propTypes = {
+Icons.propTypes = {
   name: PropTypes.string.isRequired,
 }
 

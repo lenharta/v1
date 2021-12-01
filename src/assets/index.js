@@ -16,6 +16,7 @@ export { default as ComputerSitImg } from './images/ComputerSitImg.js';
 
 
 // Icons
+export { default as Icons } from './Icons';
 export { default as GithubIcon } from './icons/GithubIcon';
 export { default as InstagramIcon } from './icons/InstagramIcon';
 export { default as ExternalIcon } from './icons/ExternalIcon';

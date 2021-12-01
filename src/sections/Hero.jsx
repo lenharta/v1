@@ -7,7 +7,7 @@ import { navbarDelay } from '../utils'
 
 const StyledHero = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
+  /* flex-direction: row; */
   min-height: 100vh;
   padding: 0;
 
@@ -28,12 +28,15 @@ const StyledInnerTitle = styled.div`
 
   .comp-img {
     position: absolute;
-    width: 250px;
-    height: 250px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     left: 700px;
+    transform: translateY(27px);
+    margin-right: 25px;
+    svg {
+      width: 250px;
+      }
 
     @media (max-width: 1100px) {
       display: none;

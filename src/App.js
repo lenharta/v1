@@ -24,7 +24,7 @@ const App = () => {
           <div className="bg__gradient">
             <Nav />
             <Layout />
-            {/* <Social /> */}
+            <Social />
             {/* <Email /> */}
           </div>
         )}
