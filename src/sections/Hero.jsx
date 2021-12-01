@@ -32,13 +32,13 @@ const StyledInnerTitle = styled.div`
     justify-content: flex-end;
     align-items: center;
     left: 700px;
-    transform: translateY(27px);
+    transform: translateY(-5px);
     margin-right: 25px;
     svg {
-      width: 250px;
+      width: 300px;
       }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
