@@ -74,7 +74,7 @@ const Hero = () => {
   const [isMounted, setIsMounted] = useState(false)
   const prefersReducedMotion = usePrefersReducedMotion()
 
-  const one = <h1 className="gradient__text">Hello World, my Name is</h1>
+  const one = <h1 className="gradient__text">Hello World, my name is</h1>
   const two = <h2 className="gradient__text">Andrew Lenhart</h2>
   const three = <h3>I'm a Frontend Developer</h3>
   const four = (

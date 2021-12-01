@@ -1,27 +1,24 @@
 // Logos
-export { default as BrandLoader } from './logos/brandLoader.js';
-export { default as BrandLogo } from './logos/brandLogo.js';
-// Change to JS files as Needed // Move Above
-export { default as css3Logo } from './logos/css3Logo.svg';
-export { default as discordLogo } from './logos/discordLogo.svg';
-export { default as figmaLogo } from './logos/figmaLogo.svg';
-export { default as firebaseLogo } from './logos/firebaseLogo.svg';
-export { default as graphqlLogo } from './logos/graphqlLogo.svg';
-export { default as javascriptLogo } from './logos/javascriptLogo.svg';
-export { default as html5Logo } from './logos/html5Logo.svg';
-export { default as reactLogo } from './logos/reactLogo.svg';
-export { default as reduxLogo } from './logos/reduxLogo.svg';
-
+export { default as BrandLoader } from './icons/logos/brandLoader.js';
+export { default as BrandLogo } from './icons/logos/brandLogo.js';
+export { default as ReactLogo } from './icons/logos/ReactLogo';
+export { default as ReduxLogo } from './icons/logos/ReduxLogo';
+export { default as Css3Logo } from './icons/logos/Css3Logo';
+export { default as DiscordLogo } from './icons/logos/DiscordLogo';
+export { default as FigmaLogo } from './icons/logos/FigmaLogo';
+export { default as FirebaseLogo } from './icons/logos/FirebaseLogo';
+export { default as GraphqlLogo } from './icons/logos/GraphqlLogo';
+export { default as JavascriptLogo } from './icons/logos/JavascriptLogo';
+export { default as Html5Logo } from './icons/logos/Html5Logo';
 
 // Images
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';
 
 
 // Icons
-// Change to JS files as Needed // Move Above
-export { default as externalIcon } from './icons/externalIcon.svg';
-export { default as folderIcon } from './icons/folderIcon.svg';
-export { default as githubIcon } from './icons/githubIcon.svg';
-export { default as instagramIcon } from './icons/instagramIcon.svg';
-export { default as linkedinIcon } from './icons/linkedinIcon.svg';
-export { default as twitterIcon } from './icons/twitterIcon.svg';
+export { default as GithubIcon } from './icons/GithubIcon';
+export { default as InstagramIcon } from './icons/InstagramIcon';
+export { default as ExternalIcon } from './icons/ExternalIcon';
+export { default as FolderIcon } from './icons/FolderIcon';
+export { default as LinkedinIcon } from './icons/LinkedinIcon';
+export { default as TwitterIcon } from './icons/TwitterIcon';

@@ -1,9 +1,17 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import styled from 'styled-components'
+
+const StyledSocialMenu = styled.div`
+  
+`;
 
 const Social = () => {
   return (
     <>
-      <h1>Social</h1>
+      <StyledSocialMenu>
+
+      </StyledSocialMenu>
     </>
   )
 }

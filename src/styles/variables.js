@@ -21,7 +21,7 @@ const variables = css`
     --dark-orange: #E36929;
     --gradient-text: linear-gradient(90deg, rgba(231, 150, 73, 1) 0%, rgba(227, 130, 41, 1) 42%, rgba(227, 105, 41, 1) 100%);
 
-    --text: #C0C2C4;
+    --text: #F5F9E9;
     --text-heading: #CCD6F6;
 
   // Reused
