@@ -7,7 +7,6 @@ import { navbarDelay } from '../utils'
 
 const StyledHero = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
-  /* flex-direction: row; */
   min-height: 100vh;
   padding: 0;
 
@@ -91,10 +90,7 @@ const Hero = () => {
   )
   
   const five = (
-      <a 
-        aria-label="contact me" 
-        href="mailto:andrew.code21@gmail.com"
-      >
+      <a aria-label="contact me" href="mailto:andrew.code21@gmail.com">
         Get In Touch!
       </a>
     

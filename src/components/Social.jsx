@@ -23,18 +23,27 @@ const SocialList = styled.ul`
   flex-direction: column;
   height: 100%;
   width: 40px;
-  margin-top: 125px;
+  margin-top: 70px;
+  
   li {
     list-style: none;
-    margin: 30px 0;
-    }
-    svg {
-      width: 30px;
-      height: 30px;
-      &:hover {
-        stroke: var(--text);
+    margin: 40px 0;
+    a {
+      padding: 20px;
+      svg {
+        width: 30px;
+        height: 30px;
+        &:hover,
+        &:focus {
+          stroke: var(--text);
+          transform: translateY(-5px);
+          transition: var(--transition);
         }
       }
+    }
+  }
+    
+      
 `;
 
 const Social = () => {

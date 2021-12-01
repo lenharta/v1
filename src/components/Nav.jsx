@@ -39,12 +39,12 @@ const StyledNav = styled.nav`
       display: flex;
       height: 50px;
       width: 50px;
-    }
-
-    &:hover {
-      transform: scale(var(--s-scale));
       svg {
         fill-opacity: var(--orange-tint);
+        &:hover,
+        &:focus {
+          transform: scale(var(--s-scale));
+        }
       }
     }
   }
@@ -67,7 +67,8 @@ const StyledLinks = styled.div`
       a {
         color: var(--text);
         padding: 10px 10px;
-        &:hover {
+        &:hover,
+        &:focus {
           color: var(--orange);
           transition: var(--transition);
         }
@@ -105,14 +106,9 @@ const Nav = () => {
   )
 
   const Resume = (
-      <a 
-        href="#" 
-        aria-label="view my resume"
-        className="resume__button"
-      >
-        Resume
-      </a>
-
+    <a href="#" aria-label="view my resume" className="resume__button">
+      Resume
+    </a>
   )
 
   return (
@@ -149,10 +145,7 @@ const Nav = () => {
                   <TransitionGroup component={null}>
                     {isMounted &&
                       navLinks.map(({ name, url, aria }, i) => (
-                        <CSSTransition 
-                          classNames={fadeSideRClass} 
-                          timeout={timeout}
-                          >
+                        <CSSTransition classNames={fadeSideRClass} timeout={timeout}>
                             <li key={i} style={{ transitionDelay: `${i * 50}ms` }}>
                               <a aria-label={aria} href={url}>{name}</a>
                             </li>
@@ -162,11 +155,7 @@ const Nav = () => {
                 </ol>
                 <TransitionGroup component={null}>
                   {isMounted && (
-                    <CSSTransition 
-                      classNames={fadeSideRClass} 
-                      timeout={timeout} 
-                      style={{ transitionDelay: `${navLinks.length * 50}ms` }}
-                      >
+                    <CSSTransition classNames={fadeSideRClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
                         {Resume}
                     </CSSTransition>
                   )}

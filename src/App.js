@@ -25,7 +25,6 @@ const App = () => {
             <Nav />
             <Layout />
             <Social />
-            {/* <Email /> */}
           </div>
         )}
 
