@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import { BrandLoader } from '../assets'
 import anime from 'animejs'
+import { navbarDelay } from '../utils'
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -108,7 +109,7 @@ const Loader = () => {
       </div>
       <TransitionGroup component={null}>
         {isMounted && (
-          <CSSTransition classNames={fadeUpLoader} >
+          <CSSTransition classNames={fadeUpLoader}>
             <div className="title__container">
               <span>DESIGNED & BUILT BY</span>
               <span>ANDREW LENHART</span>

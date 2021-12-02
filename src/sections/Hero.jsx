@@ -102,13 +102,9 @@ const Hero = () => {
     </div>
   )
   
-  const items = [one, two, three, four, five]
+  const heroItems = [one, two, three, four, five]
   
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     const timeout = setTimeout(() => setIsMounted(true), navbarDelay);
     return () => clearTimeout(timeout);
   }, [])
@@ -119,7 +115,7 @@ const Hero = () => {
         {prefersReducedMotion ? (
           <>
             <StyledInnerTitle>
-              {items.map((item, i) => (
+              {heroItems.map((item, i) => (
                 <div key={i}>{item}</div>
               ))}
               {compImg}
@@ -130,7 +126,7 @@ const Hero = () => {
             <StyledInnerTitle>
               <TransitionGroup component={null}>
                 {isMounted && 
-                  items.map((item, i) => (
+                  heroItems.map((item, i) => (
                   <CSSTransition key={i} classNames="fadeup" timeout={navbarDelay}>
                     <div style={{ transitionDelay: `${i * 1}00ms` }}>{item}</div>
                   </CSSTransition>

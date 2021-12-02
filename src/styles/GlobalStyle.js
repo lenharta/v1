@@ -13,6 +13,23 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  :focus {
+    outline: 2px dashed var(--orange);
+    outline-offset: 3px;
+  }
+
+  // Remove Focus for mouse users
+  :focus:not(:focus-visible) {
+    outline: none;
+    outline-offset: 0px;
+  }
+
+  // If focus visible is supported
+  :focus-visible {
+    outline: 2px dashed var(--green);
+    outline-offset: 3px;
+  }
+
   body {
     background: var(--bg-navy);
     -moz-osx-font-smoothing: grayscale;
@@ -63,15 +80,15 @@ const GlobalStyle = createGlobalStyle`
   } 
   
 // Headings
-  .bigsub__heading {
+  .section__heading {
     
   }
 
-  .mediumsub__heading {
+  .big__subheading {
     
   }
 
-  .sub-heading {
+  .small__subheading {
 
   }
 

@@ -85,10 +85,6 @@ const Nav = () => {
   const fadeSideRClass = 'fadesider';
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);
