@@ -81,7 +81,29 @@ const GlobalStyle = createGlobalStyle`
   
 // Headings
   .section__heading {
-    
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 10px 0 40px;
+    font-family: var(--font-link);
+    font-size: clamp(var(--fs-md), 3vw, var(--fs-lg));
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 2px;
+      margin-left: 25px;
+      top: 2px;
+      background: linear-gradient(103.22deg, #E38229 -13.86%, #E36929 99.55%);
+
+      @media (max-width: 600px) {
+        margin-left: 12px;
+      }
+    }
   }
 
   .big__subheading {
@@ -104,19 +126,19 @@ const GlobalStyle = createGlobalStyle`
   // https://angrytools.com/gradient/
   .bg__gradient {
     // ff 3.6+
-    background:-moz-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    background:-moz-radial-gradient(circle at 30% 35%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
     // safari 5.1+,chrome 10+
-    background:-webkit-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    background:-webkit-radial-gradient(circle at 30% 35%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
     // opera 11.10+
-    background:-o-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    background:-o-radial-gradient(circle at 30% 35%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
     // ie 10+
-    background:-ms-radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    background:-ms-radial-gradient(circle at 30% 35%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
 
     // global 92%+ browsers support
-    background:radial-gradient(circle at 30% 30%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
+    background:radial-gradient(circle at 30% 35%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   }
 
 // Box Shadows

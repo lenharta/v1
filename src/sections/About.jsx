@@ -6,7 +6,7 @@ import sr from '../utils/sr'
 
 const StyledAbout = styled.section`
   ${({ theme }) => theme.mixins.flexCenter };
-  color: #fff;
+  flex-direction: column;
 `;
 
 const StyledInner = styled.div`
@@ -25,9 +25,13 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, [])
 
+  // const one = (
+
+  // )
+
   return (
     <StyledAbout id="about" ref={revealContainer}>
-      <h2 className="section__heading">About Me</h2>
+      <h2 className="section__heading gradient__text">About Me</h2>
       <StyledInner>
         <h1>About</h1>
         <h1>About</h1>

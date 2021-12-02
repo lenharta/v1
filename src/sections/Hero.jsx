@@ -48,7 +48,6 @@ const StyledInnerTitle = styled.div`
 
   h1 {
     font-family: var(--font-link);
-    font-size: 20px;
     font-size: clamp(14px, 5vw, 20px);
     margin: 10px 0 10px;
     }
@@ -60,9 +59,9 @@ const StyledInnerTitle = styled.div`
         color: var(--text);
         }
         p {
-          font-family: var(--font-link);
+          font-family: var(--font-text);
+          font-size: var(--fs-sm);
           color: var(--text);
-          font-size: 16px;
           max-width: 540px;
           margin-top: 15px;
           }

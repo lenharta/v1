@@ -7,6 +7,11 @@ const variables = css`
     --font-text: 'Roboto Mono', monospace; // 400 500
     --font-link: 'Fira Code', monospace; // 300 400
 
+  // Font sizes
+    --fs-sm: 16px;
+    --fs-md: 22px;
+    --fs-lg: 30px;
+
   // Colors
     --x-dark-navy: #0e1219;
     --dark-navy: #1B1A22;
