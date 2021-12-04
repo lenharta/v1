@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   Css3Logo,
   DiscordLogo,
+  DropdownIcon,
   ExternalIcon,
   FigmaLogo,
   FirebaseLogo,
@@ -13,6 +14,7 @@ import {
   InstagramIcon,
   JavascriptLogo,
   LinkedinIcon,
+  PlusIcon,
   ReactLogo,
   ReduxLogo,
   TwitterIcon

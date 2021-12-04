@@ -13,6 +13,7 @@ export { default as Html5Logo } from './icons/logos/Html5Logo';
 
 // Images
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';
+export { default as AboutImg } from './images/AboutImg.js';
 
 
 // Icons
@@ -23,3 +24,5 @@ export { default as ExternalIcon } from './icons/ExternalIcon';
 export { default as FolderIcon } from './icons/FolderIcon';
 export { default as LinkedinIcon } from './icons/LinkedinIcon';
 export { default as TwitterIcon } from './icons/TwitterIcon';
+export { default as UpIcon } from './icons/UpIcon';
+export { default as PlusIcon } from './icons/PlusIcon';

@@ -90,7 +90,7 @@ const Hero = () => {
   
   const five = (
       <a aria-label="contact me" href="mailto:andrew.code21@gmail.com">
-        Get In Touch!
+        Get In Touch
       </a>
     
   )

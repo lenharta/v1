@@ -48,6 +48,25 @@ module.exports = {
     },
   ],
 
+  accordionData: [
+    {
+      tab: 'Experience',
+      content: 'hello my name is what, my name is who, slicka slicka slim shady. Im tha muthafuckin d-o double g snoop dog',
+    },
+    {
+      tab: 'Work',
+      content: 'world',
+    },
+    {
+      tab: 'Tech',
+      content: 'good',
+    },
+    {
+      tab: 'Data',
+      content: 'day'
+    },
+  ],
+
   srConfig: (delay = 200, viewFactor = 0.25) => ({
     origin: 'bottom',
     distance: '20px',

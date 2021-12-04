@@ -16,7 +16,7 @@ const variables = css`
     --x-dark-navy: #0e1219;
     --dark-navy: #1B1A22;
     --navy-shadow: rgba(14, 18, 25, 0.7);
-    --light-navy: #242C3D;
+    --bg-lgtnavy: rgba(22, 28, 39, 1);
     --bg-navy: #161C27;
     --bg-tint: rgba(22, 28, 39, 0.75);
 
@@ -32,7 +32,7 @@ const variables = css`
   // Reused
     --border-radius: 4px;
     --lg-border: solid 8px #242C3D;
-    --btn-border: solid 2px #E38229;
+    --btn-border: solid 1.5px #E38229;
 
     --nav-height: 100px;
     --nav-scroll-height: 70px;
