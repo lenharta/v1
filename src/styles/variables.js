@@ -12,7 +12,7 @@ const variables = css`
     --fs-md: 22px;
     --fs-lg: 30px;
 
-  // Colors
+  // Colors 
     --x-dark-navy: #0e1219;
     --dark-navy: #1B1A22;
     --navy-shadow: rgba(14, 18, 25, 0.7);

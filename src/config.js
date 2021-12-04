@@ -51,7 +51,7 @@ module.exports = {
   accordionData: [
     {
       tab: 'Experience',
-      content: 'hello my name is what, my name is who, slicka slicka slim shady. Im tha muthafuckin d-o double g snoop dog',
+      content: 'Hello',
     },
     {
       tab: 'Work',
