@@ -38,6 +38,7 @@ const Side = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   width: 40%;
   height: 100%;
+  padding: 25px;
   margin: 15px 15px 0;
   @media (max-width: 768px) {
     display: block;
