@@ -21,29 +21,29 @@ const StyledAboutContainer = styled.section`
   }
 `;
 
+const Side = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+  width: 40%;
+  height: 100%;
+  padding: 75px 0px;
+  margin: 0 50px;
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0px auto;
+    width: 50%;
+  }
+`;
+
 const Accordian = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   width: 60%;
   border-radius: 15px;
+  padding: 0;
 
   @media (max-width: 768px) {
     display: block;
     width: 100%;
-  }
-`;
-
-
-const Side = styled.div`
-  ${({ theme }) => theme.mixins.flexCenter};
-  width: 40%;
-  height: 100%;
-  padding: 25px;
-  margin: 15px 15px 0;
-  @media (max-width: 768px) {
-    display: block;
-    margin: 0px auto;
-    width: 50%;
   }
 `;
 
@@ -52,7 +52,6 @@ const Tab = styled.div`
   width: 100%;
   margin: 20px 0 0;
   padding: 10px 0;
-  /* background: linear-gradient(103.22deg, rgba(22, 28, 39, 1) 100%, rgba(14, 18, 25, 1) 25%); */
   background-color: rgba(22, 28, 39, 1);
   border: solid 1.5px var(--orange);
   border-radius: 15px;
