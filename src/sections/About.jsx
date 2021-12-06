@@ -30,6 +30,7 @@ const Side = styled.div`
   @media (max-width: 768px) {
     display: block;
     margin: 0px auto;
+    padding: 25px 0;
     width: 50%;
   }
 `;
@@ -40,6 +41,7 @@ const Accordian = styled.div`
   width: 60%;
   border-radius: 15px;
   padding: 0;
+  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     display: block;
