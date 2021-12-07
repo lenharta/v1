@@ -4,12 +4,13 @@ import { accordionData, srConfig } from '../config';
 import { usePrefersReducedMotion } from '../hooks';
 import sr from '../utils/sr'
 import { UpIcon, PlusIcon, AboutImg } from '../assets'
+import Stack from './Stack';
 
 const StyledAboutContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
-
+  padding-bottom: 0;
 
   .inner {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -127,7 +128,7 @@ const About = () => {
 
   return (
     <StyledAboutContainer id="about" ref={revealContainer}>
-      <h2 className="section__heading-top">&lt;About&gt;</h2>
+      <h2 className="section__heading-top">About</h2>
       <div className="inner">
         <Side>
           <AboutImg />
@@ -150,7 +151,6 @@ const About = () => {
           })}
         </Accordian>
       </div>
-      <h2 className="section__heading-bottom">&lt;/About&gt;</h2>
     </StyledAboutContainer>
   );
 };

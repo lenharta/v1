@@ -14,6 +14,7 @@ export { default as Html5Logo } from './icons/logos/Html5Logo';
 // Images
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';
 export { default as AboutImg } from './images/AboutImg.js';
+export { default as Stackbg } from './images/stackbg.png';
 
 
 // Icons

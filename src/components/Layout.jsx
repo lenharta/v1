@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { About, Archive, CTA, Experience, Featured, Footer, Hero, ToTop } from '../sections'
 import styled from 'styled-components'
+import Stack from '../sections/Stack';
 
 const StyledMain = styled.main`
   margin: 0 auto;
@@ -26,6 +27,7 @@ const Layout = () => {
       <StyledMain>
         <Hero />
         <About />
+        <Stack />
         <Featured />
         <Experience />
         <Archive />
