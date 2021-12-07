@@ -31,7 +31,7 @@ const Side = styled.div`
   @media (max-width: 768px) {
     display: block;
     margin: 0px auto;
-    padding: 25px 0;
+    padding: 20px 0;
     width: 50%;
   }
 `;

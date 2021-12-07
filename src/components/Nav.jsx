@@ -160,6 +160,14 @@ const Nav = () => {
                   )}
                 </TransitionGroup>
               </StyledLinks>
+
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeSideRClass} timeout={timeout} style={{ transitionDelay: `${navLinks.length * 50}ms` }}>
+                    <Menu />
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
             </>
           )}
         </StyledNav>
