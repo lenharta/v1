@@ -52,6 +52,7 @@ const StyledNav = styled.nav`
 
 const StyledLinks = styled.div`
   ${({ theme }) => theme.mixins.flexEnd};
+  width: 100%;
   height: 50px;
 
   @media (max-width: 768px) {
@@ -125,6 +126,8 @@ const Nav = () => {
                 </ol>
                 {Resume}
               </StyledLinks>
+
+              <Menu />
             </>
           ) : (
             <>

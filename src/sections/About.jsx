@@ -27,6 +27,7 @@ const Side = styled.div`
   height: 100%;
   padding: 75px 0px;
   margin: 0 50px;
+  
   @media (max-width: 768px) {
     display: block;
     margin: 0px auto;
