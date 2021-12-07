@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import styled from 'styled-components'
-import MobileMenu from '../assets/icons/MobileMenu';
 import { navLinks } from '../config';
 import useOnClickOutside from '../hooks/useOnClickOutside'
 
@@ -61,9 +60,10 @@ const StyledMobileNav = styled.aside`
     right: 0;
     height: 100vh;
     width: min(75vw, 400px);
-    background: var(--bg-lgtnavy);
+    background: radial-gradient(circle at 50% 50%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
     transform: translateX(${props => (props.openMenu ? 0 : 100)}vw);
     transition: var(--transition);
+    border-left: solid 2px var(--navy-shadow);
 
     .resume__button {
       padding: 15px 40px;
