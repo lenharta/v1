@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Menu } from '.';
 import { BrandLogo } from '../assets';
 import { navLinks } from '../config';
 import { loaderDelay } from '../utils';
-import { usePrefersReducedMotion } from '../hooks';
+import { useScrollDirection, usePrefersReducedMotion } from '../hooks';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -17,12 +17,28 @@ const StyledHeader = styled.header`
   background: radial-gradient(circle at 30% 30%, rgba(22, 28, 39, .75) 0%, rgba(14, 18, 25, .75) 100%);
   backdrop-filter: blur(10px);
   z-index: 50;
+  transition: var(--transition);
 
   @media (max-width: 1080px) {
     padding: 0 40px;
   }
   @media (max-width: 768px) {
     padding: 0 25px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    ${props =>
+    props.scrollDirection === 'up' &&
+      !props.showNav &&
+      css`
+        transform: translateY(0px);
+      `};
+    ${props =>
+    props.scrollDirection === 'down' &&
+      !props.showNav &&
+      css`
+        transform: translateY(calc(var(--nav-height) * -1));
+      `};
   }
 `;
 
@@ -80,17 +96,31 @@ const StyledLinks = styled.div`
 
 const Nav = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const scrollDirection = useScrollDirection('down');
+  const [showNav, setShowNav] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
   const timeout = loaderDelay;
   const fadeSideLClass = 'fadesidel';
   const fadeSideRClass = 'fadesider';
+
+
+  const handleScroll = () => {
+    setShowNav(window.scrollY < 50);
+  };
+
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);
 
-    return () => clearTimeout(timeout);
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      clearTimeout(timeout);
+      
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
 
@@ -110,7 +140,7 @@ const Nav = () => {
 
   return (
     <>
-      <StyledHeader className="nav__shadow">
+      <StyledHeader className="nav__shadow" scrollDirection={scrollDirection} showNav={showNav}>
         <StyledNav>
           {prefersReducedMotion ? (
             <>

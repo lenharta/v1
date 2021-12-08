@@ -23,7 +23,7 @@ const variables = css`
 
     --light-orange: #E79649;
     --orange: #E38229;
-    --orange-tint: rgba(227, 130, 41, 0.2);
+    --orange-tint: rgba(227, 130, 41, 0.45);
     --dark-orange: #E36929;
     --gradient-text: linear-gradient(90deg, rgba(231, 150, 73, 1) 0%, rgba(227, 130, 41, 1) 42%, rgba(227, 105, 41, 1) 100%);
 

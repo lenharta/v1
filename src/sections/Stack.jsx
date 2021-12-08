@@ -9,11 +9,16 @@ import sr from '../utils/sr';
 const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  max-width: 700px;
+  max-width: 1200px;
   padding-top: 0;
 
   .perspective {
     perspective: 1000px;
+  }
+
+  .section__heading-top {
+    max-width: 1000px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -23,22 +28,22 @@ const StyledStackInner = styled.div`
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 16px;
   width: 100%;
-  max-height: 600px;
-  padding: 0;
+  max-height: 700px;
+  padding: 0 200px;
   margin: 0 auto;
 
   transform: rotateX(35deg);
 
-  
-
   @media (max-width: 768px) {
     grid-gap: 6px;
     max-width: 600px;
+    padding: 0 25px;
   }
 
   .card {
     height: 100%;
     width:100%;
+    
     
     div {
       ${({ theme }) => theme.mixins.flexCenter};
@@ -57,6 +62,7 @@ const StyledStackInner = styled.div`
         height: 75%;
         width: 75%; 
       }
+
       &:hover,
       &:focus-visible {
         box-shadow: 0 0 32px var(--orange-tint);
@@ -73,6 +79,7 @@ const StyledStackInner = styled.div`
     &:nth-child(2), &:nth-child(3) {
       grid-row: span 2;
     }
+
     &:nth-child(6) {
       grid-column: 2 / span 2;
       grid-row: 3 / span 4;
@@ -153,6 +160,7 @@ const Stack = () => {
   return (
     <>
       <StyledStackContainer id="stack" ref={revealContainer} >
+        <h2 className="section__heading-top">Stack</h2>
         <div className="perspective">
         <StyledStackInner >
           {stackItems.map((item, i) => (
