@@ -16,6 +16,7 @@ const StyledHamburger = styled.button`
 
   @media (max-width: 768px) {
     display: flex;
+    align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
     position: relative;

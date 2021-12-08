@@ -1,16 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { accordionData, srConfig } from '../config';
-import { usePrefersReducedMotion } from '../hooks';
+import { accordionData, srConfig } from '../config'
+import { usePrefersReducedMotion } from '../hooks'
 import sr from '../utils/sr'
 import { UpIcon, PlusIcon, AboutImg } from '../assets'
-import Stack from './Stack';
 
 const StyledAboutContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
-  padding-bottom: 0;
+  padding-top: 50px;
 
   .inner {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -18,6 +17,7 @@ const StyledAboutContainer = styled.section`
 
     @media (max-width: 768px) {
       display: block;
+      padding-top: 100px;
     }
   }
 `;
@@ -26,7 +26,7 @@ const Side = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   width: 40%;
   height: 100%;
-  padding: 75px 0px;
+  padding: 150px 0px;
   margin: 0 75px 0 0;
   transform: rotateY(180deg);
   
@@ -44,7 +44,6 @@ const Accordian = styled.div`
   width: 60%;
   border-radius: 15px;
   padding: 0;
-  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     display: block;
