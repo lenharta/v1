@@ -32,6 +32,7 @@ const StyledInnerTitle = styled.div`
     align-items: center;
     left: 700px;
     transform: translateY(-5px);
+    transform: rotateY(180deg);
     margin-right: 25px;
     svg {
       width: 300px;
@@ -48,14 +49,16 @@ const StyledInnerTitle = styled.div`
 
   h1 {
     font-family: var(--font-link);
-    font-size: clamp(14px, 5vw, 20px);
-    margin: 10px 0 10px;
+    font-size: clamp(var(--fs-xs), 5vw, var(--fs-sm));
+    margin: 5px 0 5px;
     }
     h2 {
       ${({ theme }) => theme.mixins.bgHeading};
+      margin-top: 5px;
       }
       h3 {
         ${({ theme }) => theme.mixins.mdHeading};
+        margin-top: 5px;
         color: var(--text);
         }
         p {

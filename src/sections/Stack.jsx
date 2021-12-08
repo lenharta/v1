@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Css3Logo, FirebaseLogo, GraphqlLogo, Html5Logo, JavascriptLogo, ReactLogo, ReduxLogo } from '../assets';
 import { srConfig } from '../config';
@@ -9,7 +9,7 @@ import sr from '../utils/sr';
 const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  max-width: 800px;
+  max-width: 700px;
   padding-top: 0;
 
   .perspective {
@@ -23,16 +23,18 @@ const StyledStackInner = styled.div`
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 16px;
   width: 100%;
-  max-height: 800px;
+  max-height: 600px;
   padding: 0;
   margin: 0 auto;
 
   transform: rotateX(35deg);
+
   
 
   @media (max-width: 768px) {
     grid-gap: 6px;
-  };
+    max-width: 600px;
+  }
 
   .card {
     height: 100%;
@@ -40,7 +42,7 @@ const StyledStackInner = styled.div`
     
     div {
       ${({ theme }) => theme.mixins.flexCenter};
-      background: var(--bg-lgtnavy);
+      background: linear-gradient(180deg, rgba(14, 18, 25, 1) 0%, rgba(22, 28, 39, 1) 100%);
       border-radius: 15px;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
@@ -59,6 +61,8 @@ const StyledStackInner = styled.div`
       &:focus-visible {
         box-shadow: 0 0 32px var(--orange-tint);
         transform: scale(1.05);
+        transform: translateY(-20px);
+        transition: var(--transition);
       }
     }
 
@@ -89,7 +93,7 @@ const Stack = () => {
   }, [])
 
   const one = (
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="HTML 5">
       <div>
         <Html5Logo />
       </div>
@@ -97,23 +101,23 @@ const Stack = () => {
   )
 
   const two = (
-    <a href="https://www.javascript.com/">
+    <a href="https://firebase.google.com/" aria-label="Firebase">
       <div>
-        <JavascriptLogo />
+        <FirebaseLogo />
       </div>
     </a>
   )
   
   const three = (
-    <a href="https://redux.js.org/">
+    <a href="https://graphql.org/" aria-label="Graph QL">
       <div>
-        <ReduxLogo />
+        <GraphqlLogo />
       </div>
     </a>
   )
   
   const four = (
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" aria-label="CSS 3">
       <div>
         <Css3Logo />
       </div>
@@ -121,15 +125,15 @@ const Stack = () => {
   )
   
   const five = (
-    <a href="https://firebase.google.com/">
+    <a href="https://www.javascript.com/" aria-label="Javascript">
       <div>
-        <FirebaseLogo />
+        <JavascriptLogo />
       </div>
     </a>
   )
   
   const six = (
-    <a href="https://reactjs.org/">
+    <a href="https://reactjs.org/" aria-label="React">
       <div>
         <ReactLogo />
       </div>
@@ -137,9 +141,9 @@ const Stack = () => {
   )
   
   const seven = (
-    <a href="https://graphql.org/">
+    <a href="https://redux.js.org/" aria-label="Redux">
       <div>
-        <GraphqlLogo />
+        <ReduxLogo />
       </div>
     </a>
   )

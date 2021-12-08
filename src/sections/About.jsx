@@ -27,7 +27,8 @@ const Side = styled.div`
   width: 40%;
   height: 100%;
   padding: 75px 0px;
-  margin: 0 50px;
+  margin: 0 75px 0 0;
+  transform: rotateY(180deg);
   
   @media (max-width: 768px) {
     display: block;
@@ -56,8 +57,8 @@ const Tab = styled.div`
   width: 100%;
   margin: 20px 0 0;
   padding: 10px 0;
-  background-color: rgba(22, 28, 39, 1);
-  border: solid 1.5px var(--orange);
+  background: linear-gradient(rgba(22, 28, 39, 1) 25%, rgba(14, 18, 25, 1) 100%);
+  border: solid 1px var(--orange);
   border-radius: 15px;
   cursor: pointer;
   box-shadow: 2px 10px 35px 1px var(--navy-tint);
@@ -65,7 +66,8 @@ const Tab = styled.div`
     padding: 0 20px;
     color: var(--orange);
     font-family: var(--font-link);
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
+    letter-spacing: 2px;
     }
     svg {
       margin: 10px 20px;
@@ -73,6 +75,7 @@ const Tab = styled.div`
       }
       &:hover {
         transform: scale(var(--s-scale));
+        transition: var(--transition);
         }
 
 `;
@@ -83,9 +86,10 @@ const Dropdown = styled.div`
   min-height: 100px;
   text-align: left;
   font-family: var(--font-text);
+  font-size: var(--fs-xs);
   font-weight: 500;
   color: var(--text);
-  background-color: var(--bg-lgtnavy);
+  background: linear-gradient(rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   border-right: solid 1.5px var(--orange);
   border-bottom: solid 1.5px var(--orange);
   border-left: solid 1.5px var(--orange);

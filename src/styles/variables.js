@@ -8,6 +8,7 @@ const variables = css`
     --font-link: 'Fira Code', monospace; // 300 400
 
   // Font sizes
+    --fs-xs: 12px;
     --fs-sm: 16px;
     --fs-md: 22px;
     --fs-lg: 30px;
