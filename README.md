@@ -3,4 +3,9 @@
 # Under Construction
 
 # Process / Learning
-- Sytled component variables
+- Sytled Components - Variables/Theme
+- AnimeJS
+- Custom Hooks
+- Prop-Types
+- Scroll Reveal
+- React Transition Groups
