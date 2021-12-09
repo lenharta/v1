@@ -10,6 +10,7 @@ export { default as FirebaseLogo } from './icons/logos/FirebaseLogo';
 export { default as GraphqlLogo } from './icons/logos/GraphqlLogo';
 export { default as JavascriptLogo } from './icons/logos/JavascriptLogo';
 export { default as Html5Logo } from './icons/logos/Html5Logo';
+export { default as SassLogo } from './icons/logos/SassLogo';
 
 // Images
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Css3Logo, FirebaseLogo, GraphqlLogo, Html5Logo, JavascriptLogo, ReactLogo, ReduxLogo } from '../assets';
+import { Css3Logo, FigmaLogo, FirebaseLogo, GraphqlLogo, Html5Logo, JavascriptLogo, ReactLogo, ReduxLogo, SassLogo } from '../assets';
 import { srConfig } from '../config';
 import { usePrefersReducedMotion } from '../hooks';
 import sr from '../utils/sr';
@@ -100,7 +100,7 @@ const Stack = () => {
   }, [])
 
   const one = (
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="HTML 5">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="HTML 5 Link">
       <div>
         <Html5Logo />
       </div>
@@ -108,23 +108,23 @@ const Stack = () => {
   )
 
   const two = (
-    <a href="https://firebase.google.com/" aria-label="Firebase">
+    <a href="https://sass-lang.com/" aria-label="Sass Link">
       <div>
-        <FirebaseLogo />
+        <SassLogo />
       </div>
     </a>
   )
   
   const three = (
-    <a href="https://graphql.org/" aria-label="Graph QL">
+    <a href="https://www.figma.com/" aria-label="Figma Link">
       <div>
-        <GraphqlLogo />
+        <FigmaLogo />
       </div>
     </a>
   )
   
   const four = (
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" aria-label="CSS 3">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" aria-label="CSS 3 Link">
       <div>
         <Css3Logo />
       </div>
@@ -132,7 +132,7 @@ const Stack = () => {
   )
   
   const five = (
-    <a href="https://www.javascript.com/" aria-label="Javascript">
+    <a href="https://www.javascript.com/" aria-label="Javascript Link">
       <div>
         <JavascriptLogo />
       </div>
@@ -140,7 +140,7 @@ const Stack = () => {
   )
   
   const six = (
-    <a href="https://reactjs.org/" aria-label="React">
+    <a href="https://reactjs.org/" aria-label="React Link">
       <div>
         <ReactLogo />
       </div>
@@ -148,7 +148,7 @@ const Stack = () => {
   )
   
   const seven = (
-    <a href="https://redux.js.org/" aria-label="Redux">
+    <a href="https://redux.js.org/" aria-label="Redux Link">
       <div>
         <ReduxLogo />
       </div>

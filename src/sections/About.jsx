@@ -26,8 +26,8 @@ const Side = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   width: 40%;
   height: 100%;
-  padding: 150px 0px;
-  margin: 0 75px 0 0;
+  padding: 150px 0 100px 0px;
+  margin: 0 80px 0 0;
   transform: rotateY(180deg);
   
   @media (max-width: 768px) {
