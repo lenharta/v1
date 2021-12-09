@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Css3Logo, FigmaLogo, FirebaseLogo, GraphqlLogo, Html5Logo, JavascriptLogo, ReactLogo, ReduxLogo, SassLogo } from '../assets';
+import { Icons } from '../assets';
 import { srConfig } from '../config';
 import { usePrefersReducedMotion } from '../hooks';
 import sr from '../utils/sr';
@@ -102,7 +102,7 @@ const Stack = () => {
   const one = (
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="HTML 5 Link">
       <div>
-        <Html5Logo />
+        <Icons name="HTML5" />
       </div>
     </a>
   )
@@ -110,7 +110,7 @@ const Stack = () => {
   const two = (
     <a href="https://sass-lang.com/" aria-label="Sass Link">
       <div>
-        <SassLogo />
+        <Icons name="Sass" />
       </div>
     </a>
   )
@@ -118,7 +118,7 @@ const Stack = () => {
   const three = (
     <a href="https://www.figma.com/" aria-label="Figma Link">
       <div>
-        <FigmaLogo />
+        <Icons name="Figma" />
       </div>
     </a>
   )
@@ -126,7 +126,7 @@ const Stack = () => {
   const four = (
     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" aria-label="CSS 3 Link">
       <div>
-        <Css3Logo />
+        <Icons name="Css3" />
       </div>
     </a>
   )
@@ -134,7 +134,7 @@ const Stack = () => {
   const five = (
     <a href="https://www.javascript.com/" aria-label="Javascript Link">
       <div>
-        <JavascriptLogo />
+        <Icons name="JavaScript" />
       </div>
     </a>
   )
@@ -142,7 +142,7 @@ const Stack = () => {
   const six = (
     <a href="https://reactjs.org/" aria-label="React Link">
       <div>
-        <ReactLogo />
+        <Icons name="React" />
       </div>
     </a>
   )
@@ -150,7 +150,7 @@ const Stack = () => {
   const seven = (
     <a href="https://redux.js.org/" aria-label="Redux Link">
       <div>
-        <ReduxLogo />
+        <Icons name="Redux" />
       </div>
     </a>
   )

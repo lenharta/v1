@@ -76,7 +76,6 @@ const Tab = styled.div`
         transform: scale(var(--s-scale));
         transition: var(--transition);
         }
-
 `;
 
 const Dropdown = styled.div`
@@ -96,7 +95,7 @@ const Dropdown = styled.div`
   border-bottom-right-radius: 15px;
   p {
     max-width: 90%;
-    }
+  }
 
   @media (max-width: 768px) {
     display: flex;

@@ -17,6 +17,7 @@ import {
   PlusIcon,
   ReactLogo,
   ReduxLogo,
+  SassLogo,
   TwitterIcon
 } from '../assets'
 
@@ -48,6 +49,8 @@ const Icons = ({ name }) => {
       return <ReactLogo />;
     case 'Redux':
       return <ReduxLogo />;
+    case 'Sass':
+      return <SassLogo />;
     case 'Twitter':
       return <TwitterIcon />;
     default:
