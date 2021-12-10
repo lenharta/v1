@@ -16,7 +16,7 @@ const StyledFeatured = styled.section`
 
 const StyledProjectContainer = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  padding: 100px 0;
+  padding: 50px 0 0;
   max-width: 1000px;
 `;
 
@@ -33,17 +33,7 @@ const StyledProject = styled.a`
     display: flex;
     width: 100%;
   }
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(227, 130, 41, 0.45);
-  }
-`;
-
-const ModalContainer = styled.div`
-  position: absolute;
-
+  
 `;
 
 const Featured = () => {
@@ -70,7 +60,6 @@ const Featured = () => {
 
         <StyledProjectContainer>
           <StyledProject onClick={openModal}>
-            <div className="overlay"></div>
             <img src={Gpt3} />
           </StyledProject>
             <Modal

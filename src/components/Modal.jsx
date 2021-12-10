@@ -1,36 +1,64 @@
 import { useRef, useEffect, useCallback } from 'react'
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
-import { Gpt3 } from '../assets'
+import { Icons } from '../assets'
 import { projectData } from '../config';
 
 const Background = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
   position: fixed;
 `;
 
 const StyledModal = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 900px;
-  height: 550px;
+  height: 500px;
   box-shadow: 0 5px 16px var(--orange-tint);
   border: solid 1px var(--orange);
   background: radial-gradient(circle at 50% 50%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
   color: var(--text);
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
   z-index: 10;
+
+  @media (max-width: 768px) {
+    width: 700px;
+    height: 450px;
+  }
+
+  @media (max-width: 480px) {
+    width: 325px;
+    height: 200px;
+  }
 `;
 
-const ModalImg = styled.div`
-  
+const ModalLinks = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+
+  a {
+    ${({ theme }) => theme.mixins.flexCenter};
+    width: 100%;
+    svg {
+      width: 50px;
+      &:hover {
+        color: var(--text);
+      }
+    }
+  }
 `;
 
 const ModalContent = styled.div`
-  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: span 2;
+  height: 100%;
 `;
 
 const ModalClose = styled.a`
@@ -53,6 +81,15 @@ const ModalClose = styled.a`
       transform: rotate(-45deg);
     }
   }
+
+  @media (max-width: 480px) {
+    width: 25px;
+    height: 25px;
+
+    div {
+      width: 20px;
+    }
+  }
 `;
 
 const Modal = ({showModal, setShowModal}) => {
@@ -63,8 +100,7 @@ const Modal = ({showModal, setShowModal}) => {
       duration: 275
     },
     opacity: showModal ? 1 : 0,
-    transition: showModal ? `all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)` : `all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)`,
-    transform: showModal ? `translateY(0%)` : `translateY(100%)`
+    transform: showModal ? `scale(100%)` : `scale(0%)`
   })
 
 
@@ -74,14 +110,26 @@ const Modal = ({showModal, setShowModal}) => {
         <Background>
           <animated.div style={animation}>
           <StyledModal showModal={showModal}>
-            <ModalImg src={Gpt3} alt="GPT3 Website" />
-            
+            <ModalLinks>
+              <div>
+                <a>
+                  <Icons name="External" />
+                </a>
+              </div>
+
+              <div>
+                <a>
+                  <Icons name="GitHub" />
+                </a>
+              </div>
+            </ModalLinks>
+
             <ModalContent>
               <div>Hello</div>
               <div>Hello</div>
               <div>Hello</div>
-              <div>Hello</div>
             </ModalContent>
+
             <ModalClose aria-label="Close modal" onClick={() => setShowModal(prev => !prev)}>
               <div />
               <div />
@@ -101,3 +149,10 @@ export default Modal
     
 //   </div>
 // ))}
+
+// .overlay {
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // background-color: rgba(227, 130, 41, 0.45);
+// }
