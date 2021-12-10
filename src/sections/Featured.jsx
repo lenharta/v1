@@ -3,7 +3,7 @@ import React from 'react'
 const Featured = () => {
   return (
     <>
-      <h1>Featured</h1>
+      
     </>
   )
 }

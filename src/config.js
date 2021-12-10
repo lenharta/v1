@@ -50,20 +50,61 @@ module.exports = {
 
   accordionData: [
     {
-      tab: 'Experience',
-      content: 'Hello',
+      tab: 'INTRO',
+      content: 'I\'m a self-taught Frontend Developer based in Greensboro, North Carolina USA. I\'m currently looking for opportunities to join a team of professionals and assist in building beautiful, accessible, human-centered digital experiences!',
     },
     {
-      tab: 'Work',
-      content: 'world',
+      tab: 'WHY HIRE ME?',
+      content: 'Explore my dedication and willingness to learn',
     },
     {
-      tab: 'Tech',
-      content: 'good',
+      tab: 'MOTIVATION',
+      content: 'Why I love tech and why I like to code',
     },
     {
-      tab: 'Data',
-      content: 'day'
+      tab: 'EXPERIENCE',
+      content: 'Technologies that i have experience with'
+    },
+  ],
+
+  // Featured Projects
+  projectOneData: [
+    {
+      title: 'OpenAI GPT-3 API Mock Website',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
+      url: '#',
+      githubLink: 'https://github.com/lenharta'
+    },
+  ],
+
+  projectTwoData: [
+    {
+      title: 'OpenAI GPT-3 API Mock Website',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
+      url: '#',
+      githubLink: 'https://github.com/lenharta'
+    },
+  ],
+
+  projectThreeData: [
+    {
+      title: 'OpenAI GPT-3 API Mock Website',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
+      url: '#',
+      githubLink: 'https://github.com/lenharta'
+    },
+  ],
+
+  projectFourData: [
+    {
+      title: 'OpenAI GPT-3 API Mock Website',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
+      url: '#',
+      githubLink: 'https://github.com/lenharta'
     },
   ],
 

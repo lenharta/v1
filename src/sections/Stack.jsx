@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Icons } from '../assets';
-import { srConfig } from '../config';
-import { usePrefersReducedMotion } from '../hooks';
-import sr from '../utils/sr';
+import { Icons } from '../assets'
+import { srConfig } from '../config'
+import { usePrefersReducedMotion } from '../hooks'
+import sr from '../utils/sr'
 
 
 const StyledStackContainer = styled.section`

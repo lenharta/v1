@@ -85,7 +85,9 @@ const Dropdown = styled.div`
   text-align: left;
   font-family: var(--font-text);
   font-size: var(--fs-xs);
+  padding: 20px 0;
   font-weight: 500;
+  line-height: 1.5;
   color: var(--text);
   background: linear-gradient(rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   border-right: solid 1.5px var(--orange);
