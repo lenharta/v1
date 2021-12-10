@@ -68,40 +68,35 @@ module.exports = {
   ],
 
   // Featured Projects
-  projectOneData: [
+  projectData: [
     {
+      id: 1,
       title: 'OpenAI GPT-3 API Mock Website',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
       tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
       url: '#',
       githubLink: 'https://github.com/lenharta'
     },
-  ],
-
-  projectTwoData: [
     {
-      title: 'OpenAI GPT-3 API Mock Website',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      id: 2,
+      title: 'Two',
+      content: 'Two',
       tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
       url: '#',
       githubLink: 'https://github.com/lenharta'
     },
-  ],
-
-  projectThreeData: [
     {
-      title: 'OpenAI GPT-3 API Mock Website',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      id: 3,
+      title: 'Three',
+      content: 'Three',
       tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
       url: '#',
       githubLink: 'https://github.com/lenharta'
     },
-  ],
-
-  projectFourData: [
     {
-      title: 'OpenAI GPT-3 API Mock Website',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
+      id: 4,
+      title: 'Four',
+      content: 'Four',
       tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
       url: '#',
       githubLink: 'https://github.com/lenharta'

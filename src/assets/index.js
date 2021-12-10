@@ -15,7 +15,7 @@ export { default as SassLogo } from './icons/logos/SassLogo';
 // Images
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';
 export { default as AboutImg } from './images/AboutImg.js';
-export { default as Stackbg } from './images/stackbg.png';
+export { default as Gpt3 } from './images/gpt3-1.png';
 
 
 // Icons
