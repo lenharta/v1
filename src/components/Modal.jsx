@@ -6,6 +6,8 @@ import { projectData } from '../config';
 
 const Background = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
+  width: 100%;
+  height: 100%;
   position: fixed;
 `;
 
@@ -32,6 +34,8 @@ const StyledModal = styled.div`
   @media (max-width: 480px) {
     width: 325px;
     height: 200px;
+    grid-template-columns: 1fr;
+    padding: 0 25px;
   }
 `;
 
@@ -41,15 +45,24 @@ const ModalLinks = styled.div`
   grid-template-rows: repeat(2, 1fr);
   height: 100%;
 
-  a {
+  div {
     ${({ theme }) => theme.mixins.flexCenter};
     width: 100%;
-    svg {
-      width: 50px;
-      &:hover {
-        color: var(--text);
+    a {
+      padding: 15px;
+      cursor: pointer;
+      svg {
+        width: 50px;
+        &:hover {
+          color: var(--text);
+        }
       }
     }
+  }
+
+  @media (max-width: 480px) {
+    display: flex;
+    width: 100%;
   }
 `;
 
@@ -58,7 +71,12 @@ const ModalContent = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column: span 2;
+  padding: 50px;
   height: 100%;
+
+  @media (max-width: 480px) {
+    display: none;   
+  }
 `;
 
 const ModalClose = styled.a`
@@ -93,8 +111,6 @@ const ModalClose = styled.a`
 `;
 
 const Modal = ({showModal, setShowModal}) => {
-  const modalRef = useRef()
-
   const animation = useSpring({
     config: {
       duration: 275
@@ -103,6 +119,16 @@ const Modal = ({showModal, setShowModal}) => {
     transform: showModal ? `scale(100%)` : `scale(0%)`
   })
 
+  const keyPress = useCallback(e => {
+    if(e.key === 'Escape' && showModal) {
+      setShowModal(false)
+    }
+  }, [setShowModal, showModal])
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress)
+    return () => document.removeEventListener('keydown', keyPress)
+  }, [keyPress])
 
   return (
     <>
@@ -112,13 +138,13 @@ const Modal = ({showModal, setShowModal}) => {
           <StyledModal showModal={showModal}>
             <ModalLinks>
               <div>
-                <a>
+                <a href="#">
                   <Icons name="External" />
                 </a>
               </div>
 
               <div>
-                <a>
+                <a href="#">
                   <Icons name="GitHub" />
                 </a>
               </div>
