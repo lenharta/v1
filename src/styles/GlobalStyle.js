@@ -49,11 +49,11 @@ const GlobalStyle = createGlobalStyle`
     max-width: 1000px;
 
     @media (max-width: 768px) {
-      padding: 100px 0;
+      padding: 75px 0;
     }
 
     @media (max-width: 480px) {
-      padding: 125px 0;
+      padding: 50px 0;
     }
   }
 

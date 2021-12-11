@@ -7,7 +7,6 @@ const StyledMain = styled.main`
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
-  min-height: 100vh;
   padding: 0 150px;
 
   @media (max-width: 1080px) {
@@ -27,7 +26,7 @@ const Layout = () => {
       <StyledMain>
         <Hero />
         <About />
-        <Stack />
+        <Stack /> 
         <Featured />
         <Experience />
         <Archive />

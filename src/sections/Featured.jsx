@@ -7,7 +7,19 @@ import { Gpt3 } from '../assets';
 import { projectData } from '../config';
 
 const StyledFeaturedSection = styled.section`
-  
+  ${({ theme }) => theme.mixins.flexCenter};
+  flex-direction: column;
+  max-width: 1000px;
+
+  @media (max-width: 768px) {
+
+  }
+`;
+
+const StyledInner = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+  max-width: 900px;
+  padding: 100px 0 0;
 `;
 
 const Featured = () => {
@@ -24,8 +36,11 @@ const Featured = () => {
 
   return (
     <>
-      <StyledFeaturedSection>
-
+      <StyledFeaturedSection id="projects" ref={revealContainer}>
+        <h2 className="section__heading-top">Projects</h2>
+        <StyledInner>
+          <div>Hello World</div>
+        </StyledInner>
       </StyledFeaturedSection>
     </>
   )

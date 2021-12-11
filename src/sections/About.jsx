@@ -9,58 +9,64 @@ const StyledAboutContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
-  padding-top: 50px;
 
   .inner {
-    ${({ theme }) => theme.mixins.flexCenter};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
 
     @media (max-width: 768px) {
       display: block;
-      padding-top: 100px;
     }
   }
 `;
 
 const Side = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  width: 40%;
-  height: 100%;
-  padding: 150px 0 100px 0px;
-  margin: 0 80px 0 0;
+  justify-content: flex-end;
+  width: 100%;
   transform: rotateY(180deg);
-  
+  padding: 50px 0;
+  svg {
+    width: 75%;
+  }
+
   @media (max-width: 768px) {
-    display: block;
-    margin: 0px auto;
-    padding: 20px 0;
-    width: 50%;
+    justify-content: center;
+    padding: 25px 0;
+    svg {
+      width: 40%;
+    }
   }
 `;
 
 const Accordian = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   border-radius: 15px;
-  padding: 0;
-
-  @media (max-width: 768px) {
-    display: block;
-    width: 100%;
-  }
+  
 `;
 
 const Tab = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
   width: 100%;
-  margin: 20px 0 0;
   padding: 10px 0;
   background: linear-gradient(rgba(22, 28, 39, 1) 25%, rgba(14, 18, 25, 1) 100%);
   border: solid 1px var(--orange);
-  border-radius: 15px;
   cursor: pointer;
   box-shadow: 2px 10px 35px 1px var(--navy-tint);
+
+  &:nth-child(1) {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  &:nth-child(4) {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
   h1 {
     padding: 0 20px;
     color: var(--orange);
@@ -81,13 +87,16 @@ const Tab = styled.div`
 const Dropdown = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   width: 95%;
+  padding: 20px 0;
+  margin-bottom: 10px;
   min-height: 100px;
+
   text-align: left;
   font-family: var(--font-text);
   font-size: var(--fs-xs);
-  padding: 20px 0;
   font-weight: 500;
   line-height: 1.5;
+
   color: var(--text);
   background: linear-gradient(rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   border-right: solid 1.5px var(--orange);

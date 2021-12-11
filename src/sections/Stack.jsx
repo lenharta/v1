@@ -9,16 +9,11 @@ import sr from '../utils/sr'
 const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  max-width: 1200px;
-  padding: 0 0 70px 0;
+  max-width: 1000px;
+  padding: 0;
 
   .perspective {
     perspective: 1000px;
-  }
-
-  .section__heading-top {
-    max-width: 1000px;
-    margin-bottom: 10px;
   }
 `;
 
@@ -28,9 +23,8 @@ const StyledStackInner = styled.div`
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 16px;
   width: 100%;
-  max-height: 700px;
-  padding: 0 200px;
-  margin: 0 auto;
+  max-height: 700px; 
+  padding: 0 150px;
 
   transform: rotateX(35deg);
 
