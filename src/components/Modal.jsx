@@ -17,7 +17,7 @@ const StyledModal = styled.div`
   width: 900px;
   height: 500px;
   box-shadow: 0 5px 16px var(--orange-tint);
-  border: solid 1px var(--orange);
+  border: solid 1.5px var(--orange);
   background: radial-gradient(circle at 50% 50%, rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
   transition: var(--transition);
   position: relative;
@@ -73,6 +73,18 @@ const ModalContent = styled.div`
   grid-column: span 2;
   padding: 50px;
   height: 100%;
+
+  .title {
+    ${({ theme }) => theme.mixins.flexCenter}; 
+  }
+
+  .content {
+    ${({ theme }) => theme.mixins.flexCenter}; 
+  }
+
+  .tech {
+    ${({ theme }) => theme.mixins.flexCenter}; 
+  }
 
   @media (max-width: 480px) {
     display: none;   
@@ -151,9 +163,15 @@ const Modal = ({showModal, setShowModal}) => {
             </ModalLinks>
 
             <ModalContent>
-              <div>Hello</div>
-              <div>Hello</div>
-              <div>Hello</div>
+              <div className="title">
+                Hello
+              </div>
+              <div className="content">
+                Hello
+              </div>
+              <div className="tech">
+                Hello
+              </div>
             </ModalContent>
 
             <ModalClose aria-label="Close modal" onClick={() => setShowModal(prev => !prev)}>
