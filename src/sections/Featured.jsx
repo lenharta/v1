@@ -3,41 +3,14 @@ import styled from 'styled-components'
 import { usePrefersReducedMotion } from '../hooks'
 import { srConfig } from '../config'
 import sr from '../utils/sr'
-import Modal from '../components/Modal';
 import { Gpt3 } from '../assets';
 import { projectData } from '../config';
 
-const StyledFeatured = styled.section`
-  ${({ theme }) => theme.mixins.flexCenter};
-  flex-direction: column;
-  max-width: 1000px auto;
-  padding-top: 50px;
-`;
-
-const StyledProjectContainer = styled.div`
-  ${({ theme }) => theme.mixins.flexCenter};
-  padding: 50px 0 0;
-  max-width: 1000px;
-`;
-
-const StyledProject = styled.a`
-  position: relative;
-  border-radius: 15px;
-  border: solid 1px;
-  max-width: 800px;
-  overflow: hidden;
-  @media (max-width: 1080px) {
-    width: 100%;
-  }
-  img {
-    display: flex;
-    width: 100%;
-  }
+const StyledFeaturedSection = styled.section`
   
 `;
 
 const Featured = () => {
-  const [showModal, setShowModal] = useState(false)
   const prefersReducedMotion = usePrefersReducedMotion()
   const revealContainer = useRef(null)
   
@@ -49,26 +22,11 @@ const Featured = () => {
     sr.reveal(revealContainer.current, srConfig())
   }, [])
 
-  const openModal = () => {
-    setShowModal(prev => !prev)
-  }
-
   return (
     <>
-      <StyledFeatured id="projects" ref={revealContainer}>
-        <h2 className="section__heading-top">Projects</h2>
+      <StyledFeaturedSection>
 
-        <StyledProjectContainer>
-          <StyledProject onClick={openModal}>
-            <img src={Gpt3} />
-          </StyledProject>
-            <Modal
-              showModal={showModal} 
-              setShowModal={setShowModal} 
-            />
-        </StyledProjectContainer>
-
-      </StyledFeatured>
+      </StyledFeaturedSection>
     </>
   )
 }
