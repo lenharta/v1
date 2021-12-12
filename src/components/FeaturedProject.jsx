@@ -51,7 +51,7 @@ const StyledProject = styled.div`
       background: var(--orange);
       opacity: 0.6;
       filter: grayscale(15%);
-      
+
       @media (max-width: 768px) {
         background: var(--bg-navy);
         opacity: 0.95;
@@ -151,6 +151,12 @@ const StyledProject = styled.div`
         svg {
           width: 40px;
           height: 40px;
+          &:hover {
+            stroke: var(--text);
+            transform: translateY(-5px);
+            transition: var(--transition);
+          }
+          
           @media (max-width: 768px) {
             width: 30px;
             height: 30px;

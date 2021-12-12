@@ -10,7 +10,6 @@ const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
-  padding-bottom: 0;
 
   .perspective {
     perspective: 1000px;
@@ -18,6 +17,10 @@ const StyledStackContainer = styled.section`
     @media (max-width: 480px) {
       perspective: 0;
     }
+  }
+
+  .section__heading-top {
+    margin-bottom: 10px;
   }
 `;
 
