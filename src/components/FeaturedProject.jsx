@@ -1,6 +1,9 @@
-import React from 'react'
+import { useRef, useEffect } from 'react'
 import styled from 'styled-components';
 import { Icons } from '../assets';
+import { usePrefersReducedMotion } from '../hooks';
+import sr from '../utils/sr';
+import { srConfig } from '../config';
 
 const StyledProject = styled.div`
   display: grid;
@@ -160,9 +163,20 @@ const StyledProject = styled.div`
 `;
 
 const FeaturedProject = (props) => {
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const revealContainer = useRef(null)
+  
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
+    
+    sr.reveal(revealContainer.current, srConfig())
+  }, [])
+
   return (
     <>
-      <StyledProject >
+      <StyledProject ref={revealContainer}>
         <div className="project__img">
           <img src={props.projectImg} alt={props.alt} />
         </div>
