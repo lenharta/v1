@@ -85,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     position: relative;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0 40px;
     color: var(--orange);
     font-family: var(--font-link);
     font-size: clamp(var(--fs-md), 3vw, var(--fs-lg));
@@ -96,6 +96,7 @@ const GlobalStyle = createGlobalStyle`
       content: '';
       display: block;
       position: relative;
+      color: var(--orange-tint);
       width: 100%;
       height: 1px;
       margin-left: 25px;

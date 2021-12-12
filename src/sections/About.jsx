@@ -33,7 +33,6 @@ const Side = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    padding: 25px 0;
     svg {
       width: 40%;
     }

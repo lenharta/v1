@@ -4,23 +4,23 @@ import { usePrefersReducedMotion } from '../hooks'
 import { srConfig } from '../config'
 import sr from '../utils/sr'
 import { Gpt3 } from '../assets';
-import { projectData } from '../config';
+import { FeaturedProject } from '../components'
 
 const StyledFeaturedSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
 
+  .section__heading-top {
+    margin-bottom: 100px;
+  }
+
   @media (max-width: 768px) {
 
   }
 `;
 
-const StyledInner = styled.div`
-  ${({ theme }) => theme.mixins.flexCenter};
-  max-width: 900px;
-  padding: 100px 0 0;
-`;
+
 
 const Featured = () => {
   const prefersReducedMotion = usePrefersReducedMotion()
@@ -38,9 +38,39 @@ const Featured = () => {
     <>
       <StyledFeaturedSection id="projects" ref={revealContainer}>
         <h2 className="section__heading-top">Projects</h2>
-        <StyledInner>
-          <div>Hello World</div>
-        </StyledInner>
+        <FeaturedProject
+          projectImg={Gpt3}
+          alt="Gpt 3"
+          title="OpenAI GPT3 Mock Website"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
+            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
+          tech="React | CSS3 | JSX | Netlify"
+          githubLink="https://github.com/lenharta"
+          url="#"
+        />
+        <FeaturedProject
+          projectImg={Gpt3}
+          alt="Gpt 3"
+          title="Disney Plus App Clone"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
+            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
+          tech="React | Styled Components | Redux | Firebase"
+          githubLink="https://github.com/lenharta"
+          url="#"
+        />
+        <FeaturedProject
+          projectImg={Gpt3}
+          alt="Gpt 3"
+          title="Travel Companion App"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
+            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
+          tech="React | Styled Components | Axios | Google Maps API"
+          githubLink="https://github.com/lenharta"
+          url="#"
+        />
       </StyledFeaturedSection>
     </>
   )

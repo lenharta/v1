@@ -67,42 +67,6 @@ module.exports = {
     },
   ],
 
-  // Featured Projects
-  projectData: [
-    {
-      id: 1,
-      title: 'OpenAI GPT-3 API Mock Website',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien.',
-      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
-      url: '#',
-      githubLink: 'https://github.com/lenharta'
-    },
-    {
-      id: 2,
-      title: 'Two',
-      content: 'Two',
-      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
-      url: '#',
-      githubLink: 'https://github.com/lenharta'
-    },
-    {
-      id: 3,
-      title: 'Three',
-      content: 'Three',
-      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
-      url: '#',
-      githubLink: 'https://github.com/lenharta'
-    },
-    {
-      id: 4,
-      title: 'Four',
-      content: 'Four',
-      tech: ['React', 'Styled-Components', 'CSS 3', 'JSX', 'Node.js'],
-      url: '#',
-      githubLink: 'https://github.com/lenharta'
-    },
-  ],
-
   srConfig: (delay = 200, viewFactor = 0.25) => ({
     origin: 'bottom',
     distance: '20px',

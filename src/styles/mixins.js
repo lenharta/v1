@@ -68,6 +68,12 @@ const mixins = {
     font-family: var(--font-heading);
     font-weight: 700;
   `,
+
+  resetList: css`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  `,
 };
 
 export default mixins;
