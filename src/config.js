@@ -27,18 +27,18 @@ module.exports = {
       aria: 'about',
     },
     {
+      name: 'Stack',
+      url: '/#stack',
+      aria: 'Stack',
+    },
+    {
       name: 'Projects',
       url: '/#projects',
       aria: 'projects',
     },
     {
-      name: 'Experience',
-      url: '/#experience',
-      aria: 'experience',
-    },
-    {
       name: 'Archive',
-      url: '/#archice',
+      url: '/#archive',
       aria: 'archive',
     },
     {

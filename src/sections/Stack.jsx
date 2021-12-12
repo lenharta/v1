@@ -10,7 +10,7 @@ const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
-  padding: 0;
+  padding-bottom: 0;
 
   .perspective {
     perspective: 1000px;

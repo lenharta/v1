@@ -28,8 +28,8 @@ const Layout = () => {
         <About />
         <Stack /> 
         <Featured />
-        <Experience />
-        <Archive />
+        {/* <Experience /> */}
+        {/* <Archive /> */}
         <CTA />
         <ToTop />
         <Footer />

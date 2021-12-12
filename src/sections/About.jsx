@@ -85,9 +85,8 @@ const Tab = styled.div`
 
 const Dropdown = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  width: 95%;
+  width: 100%;
   padding: 20px 0;
-  margin-bottom: 10px;
   min-height: 100px;
 
   text-align: left;
@@ -101,15 +100,12 @@ const Dropdown = styled.div`
   border-right: solid 1.5px var(--orange);
   border-bottom: solid 1.5px var(--orange);
   border-left: solid 1.5px var(--orange);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   p {
     max-width: 90%;
   }
 
   @media (max-width: 768px) {
     display: flex;
-    width: 95%;
     margin: 0 auto;
     p {
       max-width: 90%;

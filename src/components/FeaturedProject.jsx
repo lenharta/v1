@@ -9,7 +9,6 @@ const StyledProject = styled.div`
   display: grid;
   position: relative;
   width: 100%;
-  margin-bottom: 100px;
   grid-template-columns: repeat(12, 1fr);
   color: var(--text);
 
