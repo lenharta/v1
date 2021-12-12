@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import { usePrefersReducedMotion } from '../hooks';
+import sr from '../utils/sr';
+import { srConfig } from '../config';
 
 const StyledCTASection = styled.section`
-  height: 100vh;
   color: var(--text);
 `;
 
 const StyledCTAInner = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  height: 100%;
+  padding: 50px 0;
   max-width: 600px;
   margin: 0 auto;
   flex-direction: column;
@@ -18,13 +20,12 @@ const StyledCTAInner = styled.div`
     Color: var(--orange);
     font-family: var(--font-link);
     font-size: 16px;
-    font-weight: 400;
     margin-bottom: 10px;
   }
 
   h1 {
     font-family: var(--font-heading);
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
   }
@@ -33,14 +34,14 @@ const StyledCTAInner = styled.div`
     font-family: var(--font-text);
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   h3 {
     Color: var(--orange);
     font-family: var(--font-link);
     font-size: clamp(16px, 5vw, 32px);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   a {
@@ -51,9 +52,20 @@ const StyledCTAInner = styled.div`
 `;
 
 const CTA = () => {
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const revealContainer = useRef(null)
+  
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
+    
+    sr.reveal(revealContainer.current, srConfig())
+  }, [])
+
   return (
     <>
-      <StyledCTASection id="contact">
+      <StyledCTASection id="contact" ref={revealContainer}>
         <h2 className="section__heading-top">Contact</h2>
         <StyledCTAInner>
           <h2>So What's Next?</h2>

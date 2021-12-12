@@ -51,9 +51,7 @@ const StyledProject = styled.div`
       background: var(--orange);
       opacity: 0.6;
       filter: grayscale(15%);
-      &:hover {
-        background: none;
-      }
+      
       @media (max-width: 768px) {
         background: var(--bg-navy);
         opacity: 0.95;
@@ -63,6 +61,8 @@ const StyledProject = styled.div`
     img {
       width: 100%;
       height: 100%;
+      border: solid 2px var(--orange);
+      border-radius: 15px;
       @media (max-width: 768px) {
         object-fit: cover;
         filter: grayscale(100%) contrast(1);
