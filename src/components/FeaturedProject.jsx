@@ -76,7 +76,7 @@ const StyledProject = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    grid-column: -1 / 7;
+    grid-column: -1 / 6;
     grid-row: 1 / -1;
     text-align: right;
     z-index: 10;

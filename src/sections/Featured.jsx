@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { usePrefersReducedMotion } from '../hooks'
 import { srConfig } from '../config'
@@ -38,13 +38,10 @@ const Featured = () => {
           projectImg={Gpt3}
           alt="Gpt 3"
           title="OpenAI GPT3 Mock Website"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
-            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
+          content="A mock website promoting OpenAI's GPT-3 API that is now open to the public. "
           tech="React | CSS3 | JSX | Netlify"
-          githubLink="https://github.com/lenharta"
+          githubLink="https://github.com/lenharta/gpt3"
           url="#"
-          ref={revealContainer}
         />
         <FeaturedProject
           projectImg={Gpt3}
@@ -56,7 +53,6 @@ const Featured = () => {
           tech="React | Styled Components | Redux | Firebase"
           githubLink="https://github.com/lenharta"
           url="#"
-          ref={revealContainer}
         />
         <FeaturedProject
           projectImg={Gpt3}
@@ -68,7 +64,6 @@ const Featured = () => {
           tech="React | Styled Components | Axios | Google Maps API"
           githubLink="https://github.com/lenharta"
           url="#"
-          ref={revealContainer}
         />
       </StyledFeaturedSection>
     </>
