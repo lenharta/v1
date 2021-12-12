@@ -14,6 +14,10 @@ const StyledStackContainer = styled.section`
 
   .perspective {
     perspective: 1000px;
+    
+    @media (max-width: 480px) {
+      perspective: 0;
+    }
   }
 `;
 
@@ -34,6 +38,11 @@ const StyledStackInner = styled.div`
     padding: 0 25px;
   }
 
+  @media (max-width: 480px) {
+    transform: rotateX(0deg);
+    padding: 25px 0;
+  }
+
   .card {
     height: 100%;
     width:100%;
@@ -51,6 +60,9 @@ const StyledStackInner = styled.div`
       border-left: solid 1px var(--orange-tint);
       border-right: solid 1px var(--orange-tint);
       border-bottom: solid 10px var(--orange-tint);
+      @media (max-width: 480px) {
+        border: solid 1px var(--orange-tint);
+      }
       
       svg {
         height: 75%;

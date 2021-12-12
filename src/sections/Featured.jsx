@@ -13,6 +13,10 @@ const StyledFeaturedSection = styled.section`
 
   .section__heading-top {
     margin-bottom: 100px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+    }
   }
 `;
 
@@ -71,9 +75,3 @@ const Featured = () => {
 }
 
 export default Featured
-
-// <a> link Container with blue border (Rotate on scroll animation)
-// Picture of Project behind
-// Skewed Div with opac border (translates horizontally on hover) => Div inside Title of project w/ < See more that translates on hover
-// full screen Modal Pop-up with more information (github + external link) opac background
-// use props with ID to map information in modal
