@@ -9,6 +9,7 @@ const StyledAboutContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   max-width: 1000px;
+  padding-bottom: 0;
 
   .inner {
     display: grid;
