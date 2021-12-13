@@ -45,7 +45,6 @@ const Accordian = styled.div`
   flex-direction: column;
   width: 100%;
   border-radius: 15px;
-  
 `;
 
 const Tab = styled.div`
