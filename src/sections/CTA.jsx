@@ -63,16 +63,27 @@ const CTA = () => {
     sr.reveal(revealContainer.current, srConfig())
   }, [])
 
+  const one = <h2 className="gradient__text">So What's Next?</h2>
+  const two = <h1>Get In Touch</h1>
+  const three = (
+    <p>I'm currently looking for opportunities to join a team of professionals and assist 
+      in building beautiful, accessible, human-centered digital experiences!
+    </p>
+  )
+
+  const four = <h3 className="gradient__text">andrew.code21@gmail.com</h3>
+  const five = <a>Email Me!</a>
+
+  const ctaItems = [one, two, three, four, five]
+
   return (
     <>
       <StyledCTASection id="contact" ref={revealContainer}>
         <h2 className="section__heading-top">Contact</h2>
         <StyledCTAInner>
-          <h2>So What's Next?</h2>
-          <h1>Get In Touch</h1>
-          <p>I'm currently looking for opportunities to join a team of professionals and assist in building beautiful, accessible, human-centered digital experiences!</p>
-          <h3>andrew.code21@gmail.com</h3>
-          <a>Email Me!</a>
+          {ctaItems.map((item, i) => (
+            <div key={i}>{item}</div>
+          ))}
         </StyledCTAInner>
       </StyledCTASection>
     </>
