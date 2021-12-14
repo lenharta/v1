@@ -31,8 +31,7 @@ const Layout = () => {
         {/* <Experience /> */}
         {/* <Archive /> */}
         <CTA />
-        <ToTop />
-        <Footer />
+        {/* <ToTop /> */}
       </StyledMain>
     </>
   )

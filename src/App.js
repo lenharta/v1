@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Layout, Social, Nav, Loader, Email } from './components'
+import { Footer } from './sections'
 import { GlobalStyle, theme } from './styles'
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
             <Nav />
             <Layout />
             <Social />
+            <Footer />
           </div>
         )}
 

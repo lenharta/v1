@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: 700;
+  }
+
   :focus {
     outline: 2px dashed var(--orange);
     outline-offset: 3px;
