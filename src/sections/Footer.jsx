@@ -1,13 +1,14 @@
-import React from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Icons } from '../assets';
-import { socialMedia } from '../config';
+import { socialMedia, srConfig } from '../config';
+import { usePrefersReducedMotion } from '../hooks';
+import sr from '../utils/sr';
 
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter}
   height: 150px;
   width: 100%;
-  background: radial-gradient(circle at 30% 30%, rgba(14, 18, 25, .55) 0%, rgba(14, 18, 25, .75) 100%);
   color: var(--text);
 `;
 
@@ -45,9 +46,20 @@ const StyledFooterInner = styled.div`
 `;
 
 const Footer = () => {
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const revealContainer = useRef(null)
+  
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
+    
+    sr.reveal(revealContainer.current, srConfig())
+  }, [])
+
   return (
     <>
-      <StyledFooter>
+      <StyledFooter ref={revealContainer}>
         <StyledFooterInner>
           <div className="mobile__social">
             {socialMedia.map(({ name, url }, i) => (
