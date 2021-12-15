@@ -8,6 +8,7 @@ import {
   FigmaLogo,
   FirebaseLogo,
   FolderIcon,
+  ForkIcon,
   GithubIcon,
   GraphqlLogo,
   Html5Logo,
@@ -18,6 +19,7 @@ import {
   ReactLogo,
   ReduxLogo,
   SassLogo,
+  StarIcon,
   TwitterIcon
 } from '../assets'
 
@@ -33,6 +35,8 @@ const Icons = ({ name }) => {
       return <FirebaseLogo />;
     case 'Folder':
       return <FolderIcon />;
+    case 'Fork':
+      return <ForkIcon />;
     case 'GitHub':
       return <GithubIcon />;
     case 'GraphQL':
@@ -51,6 +55,8 @@ const Icons = ({ name }) => {
       return <ReduxLogo />;
     case 'Sass':
       return <SassLogo />;
+    case 'Star':
+      return <StarIcon />;
     case 'Twitter':
       return <TwitterIcon />;
     default:

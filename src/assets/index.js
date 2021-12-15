@@ -28,3 +28,5 @@ export { default as LinkedinIcon } from './icons/LinkedinIcon';
 export { default as TwitterIcon } from './icons/TwitterIcon';
 export { default as UpIcon } from './icons/UpIcon';
 export { default as PlusIcon } from './icons/PlusIcon';
+export { default as StarIcon } from './icons/StarIcon';
+export { default as ForkIcon } from './icons/ForkIcon';
