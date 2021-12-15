@@ -6,13 +6,14 @@ import { srConfig } from '../config';
 
 const StyledCTASection = styled.section`
   color: var(--text);
+  padding-bottom: 0;
 `;
 
 const StyledCTAInner = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
-  padding: 50px 0;
+  padding: 100px 0 0;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   flex-direction: column;
   text-align: center;
 
@@ -72,14 +73,13 @@ const CTA = () => {
   )
 
   const four = <h3 className="gradient__text">andrew.code21@gmail.com</h3>
-  const five = <a>Email Me!</a>
+  const five = <a aria-label="contact me" href="mailto:andrew.code21@gmail.com">Email Me!</a>
 
   const ctaItems = [one, two, three, four, five]
 
   return (
     <>
       <StyledCTASection id="contact" ref={revealContainer}>
-        <h2 className="section__heading-top">Contact</h2>
         <StyledCTAInner>
           {ctaItems.map((item, i) => (
             <div key={i}>{item}</div>
