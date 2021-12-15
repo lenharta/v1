@@ -85,8 +85,8 @@ const Footer = () => {
   useEffect(() => {
     fetch('https://api.github.com/repos/lenharta/portfolio-v1')
       .then(res => res.json())
-      .then(data => {
-        const { stargazers_count, forks_count } = data;
+      .then(json => {
+        const { stargazers_count, forks_count } = json;
         setGitHubInfo({
           stars: stargazers_count,
           forks: forks_count,
@@ -117,14 +117,14 @@ const Footer = () => {
             ))}
           </div>
           <h3>Designed & Built by Andrew Lenhart</h3>
-            <div className="github__data">
+          <div className="github__data">
             <div>
               <Icons name="Star" />
-              <span>{githubInfo.stars.toLocaleString()}</span>
+              <span>{githubInfo.stars}</span>
             </div>
             <div>
               <Icons name="Fork" />
-              <span>{githubInfo.forks.toLocaleString()}</span>
+              <span>{githubInfo.forks}</span>
             </div> 
           </div>
         </StyledFooterInner>
