@@ -65,6 +65,7 @@ const StyledStackInner = styled.div`
       border-bottom: solid 10px var(--orange-tint);
       @media (max-width: 480px) {
         border: solid 1px var(--orange-tint);
+        border-radius: 15px;
       }
       
       svg {

@@ -19,6 +19,10 @@ const StyledFooterInner = styled.div`
   font-family: var(--font-link);
   font-size: var(--fs-xs);
 
+  h3 {
+    margin-bottom: 20px;
+  }
+
   .mobile__social {
     display: none;
     flex-direction: row;
@@ -46,16 +50,24 @@ const StyledFooterInner = styled.div`
   }
 
   .github__data {
-    ${({ theme }) => theme.mixins.flexCenter}
+    ${({ theme }) => theme.mixins.flexBetween}
+    justify-content: space-around;
     margin-top: 10px;
+    width: 100%;
+
+    div {
+      ${({ theme }) => theme.mixins.flexCenter}
+      align-items: center;
+    }
+
     & > span {
-      display: inline-flex;
+      flex-direction: row;
       align-items: center;
       margin: 0 7px;
     }
     svg {
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 7px;
       width: 14px;
       height: 14px;
     }
@@ -72,9 +84,9 @@ const Footer = () => {
 
   useEffect(() => {
     fetch('https://api.github.com/repos/lenharta/portfolio-v1')
-      .then(response => response.json())
-      .then(json => {
-        const { stargazers_count, forks_count } = json;
+      .then(res => res.json())
+      .then(data => {
+        const { stargazers_count, forks_count } = data;
         setGitHubInfo({
           stars: stargazers_count,
           forks: forks_count,
@@ -105,18 +117,16 @@ const Footer = () => {
             ))}
           </div>
           <h3>Designed & Built by Andrew Lenhart</h3>
-          {githubInfo.stars && githubInfo.forks && (
             <div className="github__data">
-              <div>
-                <Icons name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </div>
-              <div>
-                <Icons name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </div> 
+            <div>
+              <Icons name="Star" />
+              <span>{githubInfo.stars.toLocaleString()}</span>
             </div>
-          )}
+            <div>
+              <Icons name="Fork" />
+              <span>{githubInfo.forks.toLocaleString()}</span>
+            </div> 
+          </div>
         </StyledFooterInner>
       </StyledFooter>
     </>
