@@ -117,18 +117,16 @@ const Footer = () => {
             ))}
           </div>
           <h3>Designed & Built by Andrew Lenhart</h3>
-          
-            <div className="github__data">
-              <div>
-                <Icons name="Star" />
-                <span>{githubInfo.stars}</span>
-              </div>
-              <div>
-                <Icons name="Fork" />
-                <span>{githubInfo.forks}</span>
-              </div> 
+          <div className="github__data">
+            <div>
+              <Icons name="Star" />
+              <span>{githubInfo.stars}</span>
             </div>
-          
+            <div>
+              <Icons name="Fork" />
+              <span>{githubInfo.forks}</span>
+            </div> 
+          </div>
         </StyledFooterInner>
       </StyledFooter>
     </>
