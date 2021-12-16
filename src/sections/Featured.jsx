@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { usePrefersReducedMotion } from '../hooks'
 import { srConfig } from '../config'
 import sr from '../utils/sr'
-import { Gpt3 } from '../assets';
+import { disneyPlus, Gpt3 } from '../assets';
 import { FeaturedProject } from '../components'
 
 const StyledFeaturedSection = styled.section`
@@ -48,9 +48,9 @@ const Featured = () => {
           url="#"
         />
         <FeaturedProject
-          projectImg={Gpt3}
+          projectImg={disneyPlus}
           alt="Gpt 3"
-          title="Disney Plus App Clone"
+          title="Disney+ App Clone"
           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
             incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
             risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."

@@ -16,6 +16,7 @@ export { default as SassLogo } from './icons/logos/SassLogo';
 export { default as ComputerSitImg } from './images/ComputerSitImg.js';
 export { default as AboutImg } from './images/AboutImg.js';
 export { default as Gpt3 } from './images/gpt3-1.png';
+export { default as disneyPlus } from './images/disneyplus.png';
 
 
 // Icons
