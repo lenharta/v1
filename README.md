@@ -4,6 +4,7 @@
 
 # Process / Learning
 - Sytled Components - Variables/Theme
+- GitHub User API
 - AnimeJS
 - Custom Hooks
 - Prop-Types
