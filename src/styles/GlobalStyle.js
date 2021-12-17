@@ -13,11 +13,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3 {
-    margin: 0;
-    font-weight: 700;
-  }
-
   :focus {
     outline: 2px dashed var(--orange);
     outline-offset: 3px;
@@ -31,12 +26,12 @@ const GlobalStyle = createGlobalStyle`
 
   // If focus visible is supported
   :focus-visible {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--orange);
     outline-offset: 3px;
   }
 
   body {
-    background: var(--bg-navy);
+    background: var(--x-dark-navy);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
