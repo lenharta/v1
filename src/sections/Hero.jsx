@@ -24,6 +24,45 @@ const StyledInnerTitle = styled.div`
   width: 100%;
   margin-top: 50px;
   position: relative;
+  
+  @media (max-width: 480px) and (min-height: 700px) {
+    padding: 10vh 0;
+  }
+
+  h1 {
+    font-family: var(--font-link);
+    font-size: clamp(var(--fs-xs), 5vw, var(--fs-sm));
+    margin: 5px 0 5px;
+  }
+
+  h2 {
+    ${({ theme }) => theme.mixins.bgHeading};
+    margin-top: 5px;
+  }
+
+  h3 {
+    ${({ theme }) => theme.mixins.mdHeading};
+    margin-top: 5px;
+    color: var(--text);
+  }
+
+  p {
+    font-family: var(--font-text);
+    font-size: var(--fs-sm);
+    color: var(--text);
+    max-width: 540px;
+    margin-top: 15px;
+    line-height: 1.7;
+
+    @media (max-width: 480px) {
+      line-height: 1.5;
+    }
+  }
+
+  a {
+    ${({ theme }) => theme.mixins.bgButton};
+    margin: 40px 0 0 0;
+  }
 
   .comp-img {
     position: absolute;
@@ -42,36 +81,6 @@ const StyledInnerTitle = styled.div`
       display: none;
     }
   }
-  
-  @media (max-width: 480px) and (min-height: 700px) {
-    padding: 10vh 0;
-  }
-
-  h1 {
-    font-family: var(--font-link);
-    font-size: clamp(var(--fs-xs), 5vw, var(--fs-sm));
-    margin: 5px 0 5px;
-    }
-    h2 {
-      ${({ theme }) => theme.mixins.bgHeading};
-      margin-top: 5px;
-      }
-      h3 {
-        ${({ theme }) => theme.mixins.mdHeading};
-        margin-top: 5px;
-        color: var(--text);
-        }
-        p {
-          font-family: var(--font-text);
-          font-size: var(--fs-sm);
-          color: var(--text);
-          max-width: 540px;
-          margin-top: 15px;
-          }
-          a {
-            ${({ theme }) => theme.mixins.bgButton};
-            margin: 40px 0 0 0;
-          }
 `;
 
 const Hero = () => {
@@ -81,21 +90,19 @@ const Hero = () => {
   const one = <h1 className="gradient__text">Hello World, my name is</h1>
   const two = <h2 className="gradient__text">Andrew Lenhart</h2>
   const three = <h3>I'm a Frontend Developer</h3>
+  
   const four = (
-    <>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Ex natus sapiente fuga eius facere dolore illum quia eos, 
-        voluptatem sed.
-      </p>
-    </>
+    <p>
+      I'm currently looking for new opportunities to further my career and education in software development.
+      Based in the United States, I love combining left brain logic with right brain creativity to create beautiful
+      and functional digital experiences for everyone!
+    </p>
   )
   
   const five = (
-      <a aria-label="contact me" href="mailto:andrew.code21@gmail.com">
-        Get In Touch
-      </a>
-    
+    <a aria-label="contact me" href="mailto:andrew.code21@gmail.com">
+      Get In Touch
+    </a> 
   )
 
   const compImg = (
