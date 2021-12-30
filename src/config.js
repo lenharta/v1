@@ -36,11 +36,11 @@ module.exports = {
       url: '/#projects',
       aria: 'projects',
     },
-    {
-      name: 'Archive',
-      url: '/#archive',
-      aria: 'archive',
-    },
+    // {
+    //   name: 'Archive',
+    //   url: '/#archive',
+    //   aria: 'archive',
+    // },
     {
       name: 'Contact',
       url: '/#contact',
