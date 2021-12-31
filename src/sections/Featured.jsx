@@ -50,7 +50,7 @@ const Featured = () => {
         <FeaturedProject
           projectImg={disneyPlus}
           alt="Disney+ App Clone"
-          title="Disney+ App Clone"
+          title="Disney+ Streaming App Clone"
           content="One of the most fun projects, A mock Disney+ web app that utilizes Google Authenication and FireStore for hosting and data about the featured movies and shows available now on Disney+"
           tech="React | Styled Components | Redux | Firebase"
           githubLink="https://github.com/lenharta"
