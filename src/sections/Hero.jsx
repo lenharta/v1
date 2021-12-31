@@ -95,7 +95,7 @@ const Hero = () => {
     <p>
       I'm currently looking for new opportunities to further my career and education in software development.
       Based in the United States, I love combining left brain logic with right brain creativity to create beautiful
-      and functional digital experiences for everyone!
+      and functional digital experiences for everyone.
     </p>
   )
   

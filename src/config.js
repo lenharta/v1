@@ -36,11 +36,6 @@ module.exports = {
       url: '/#projects',
       aria: 'projects',
     },
-    // {
-    //   name: 'Archive',
-    //   url: '/#archive',
-    //   aria: 'archive',
-    // },
     {
       name: 'Contact',
       url: '/#contact',
@@ -55,15 +50,15 @@ module.exports = {
     },
     {
       tab: 'WHY HIRE ME?',
-      content: 'Explore my dedication and willingness to learn',
+      content: 'My dedication and exitement to learning something new everyday is paramount. Software development is extremely fascinating to me. It\'s an amazing artform of combining left brain logic with right brain creativity to create beautiful and functional digital experiences. I\'m truely looking to make software development my lifelong career.',
     },
     {
       tab: 'MOTIVATION',
-      content: 'Why I love tech and why I like to code',
+      content: 'I have always loved technology from the consumer side. It was always a dream that one day I could learn how the websites and apps I used were built and designed. I took the initiative to learn, develop, and use my skills in software development. I haven\'t looked back since. With some in my family impaired by low-vision, I\'m dedicated to making the web more accessible to everyone.',
     },
     {
       tab: 'EXPERIENCE',
-      content: 'Technologies that i have experience with'
+      content: 'Most of my experience is with Javascript and the ReactJS framework. I\'m proficient in HTML5, JSX, JavaScript, React.JS, JSON, Axios(REST API\'s) as well as style languages CSS3 and SASS, though I prefer Styled-Components while using React. I also have some experience with Redux using Google Firebase.'
     },
   ],
 

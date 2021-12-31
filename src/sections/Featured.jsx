@@ -45,27 +45,14 @@ const Featured = () => {
           content="A mock website promoting OpenAI's GPT-3 API that is now open to the public. "
           tech="React | CSS3 | JSX | Netlify"
           githubLink="https://github.com/lenharta/gpt3"
-          url="#"
+          url="https://gpt3-mockup.netlify.app/"
         />
         <FeaturedProject
           projectImg={disneyPlus}
           alt="Disney+ App Clone"
           title="Disney+ App Clone"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
-            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
+          content="One of the most fun projects, A mock Disney+ web app that utilizes Google Authenication and FireStore for hosting and data about the featured movies and shows available now on Disney+"
           tech="React | Styled Components | Redux | Firebase"
-          githubLink="https://github.com/lenharta"
-          url="#"
-        />
-        <FeaturedProject
-          projectImg={Gpt3}
-          alt="Gpt 3"
-          title="Travel Companion App"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Neque aliquam vestibulum morbi blandit cursus 
-            risus at. Netus et malesuada fames ac. Justo nec ultrices dui sapien."
-          tech="React | Styled Components | Axios | Google Maps API"
           githubLink="https://github.com/lenharta"
           url="#"
         />
