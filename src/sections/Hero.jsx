@@ -93,9 +93,9 @@ const Hero = () => {
   
   const four = (
     <p>
-      I'm currently looking for new opportunities to further my career and education in software development.
-      Based in the United States, I love combining left brain logic with right brain creativity to create beautiful
-      and functional digital experiences for everyone.
+      Based in the United States, I'm currently looking for new opportunities to further my 
+      career and education in software development by joining a team of professionals to create 
+      beautiful and functional digital experiences for everyone.  
     </p>
   )
   

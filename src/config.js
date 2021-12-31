@@ -46,11 +46,11 @@ module.exports = {
   accordionData: [
     {
       tab: 'INTRO',
-      content: 'I\'m a self-taught Frontend Developer based in Greensboro, North Carolina USA. I\'m currently looking for opportunities to join a team of professionals and assist in building beautiful, accessible, human-centered digital experiences!',
+      content: 'I\'m a self-taught Frontend Developer based in Greensboro, NC USA. I\'m currently looking for opportunities to join a team of professionals and assist in building beautiful, accessible, human-centered digital experiences!',
     },
     {
       tab: 'WHY HIRE ME?',
-      content: 'My dedication and exitement to learning something new everyday is paramount. Software development is extremely fascinating to me. It\'s an amazing artform of combining left brain logic with right brain creativity to create beautiful and functional digital experiences. I\'m truely looking to make software development my lifelong career.',
+      content: 'My dedication and excitement to learn something new everyday is paramount. Software development is extremely fascinating to me. It\'s an amazing artform of combining left brain logic with right brain creativity to create beautiful and functional digital experiences. I\'m truely looking to make software development my lifelong career.',
     },
     {
       tab: 'MOTIVATION',
