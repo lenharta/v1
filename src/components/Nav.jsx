@@ -133,7 +133,7 @@ const Nav = () => {
   )
 
   const Resume = (
-    <a href="/resume.pdf" aria-label="view my resume" target="_blank" rel="noopener noreferrer" className="resume__button">
+    <a href="/resume-v1.pdf" aria-label="view my resume" target="_blank" rel="noopener noreferrer" className="resume__button">
       Resume
     </a>
   )
