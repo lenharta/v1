@@ -44,43 +44,40 @@ const Accordian = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   width: 100%;
-  border-radius: 15px;
 `;
 
 const Tab = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
   width: 100%;
-  padding: 10px 0;
-  background: linear-gradient(rgba(22, 28, 39, 1) 25%, rgba(14, 18, 25, 1) 100%);
-  border: solid 1px var(--orange);
+  padding: 10px 0;  
+  background: var(--bg-navy);
   cursor: pointer;
   box-shadow: 2px 10px 35px 1px var(--navy-tint);
 
-  &:nth-child(1) {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  &:first-of-type{
+    border-radius: 15px 15px 0 0;
   }
 
-  &:nth-child(4) {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+  &:last-of-type{
+    border-radius: 0 0 15px 15px;
   }
 
   h1 {
     padding: 0 20px;
-    color: var(--orange);
+    color: var(--text);
     font-family: var(--font-link);
     font-size: var(--fs-sm);
     letter-spacing: 2px;
     }
     svg {
       margin: 10px 20px;
-      stroke: var(--orange)
-      }
+      stroke: var(--orange);
       &:hover {
-        transform: scale(var(--s-scale));
-        transition: var(--transition);
+          transform: scale(var(--s-scale));
+          transition: var(--transition);
         }
+      }
+      
 `;
 
 const Dropdown = styled.div`
@@ -91,15 +88,13 @@ const Dropdown = styled.div`
 
   text-align: left;
   font-family: var(--font-text);
-  font-size: var(--fs-xs);
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
 
   color: var(--text);
-  background: linear-gradient(rgba(22, 28, 39, 1) 0%, rgba(14, 18, 25, 1) 100%);
-  border-right: solid 1.5px var(--orange);
-  border-bottom: solid 1.5px var(--orange);
-  border-left: solid 1.5px var(--orange);
+  background: var(--bg-navy);
+  
   p {
     max-width: 90%;
   }
@@ -107,9 +102,6 @@ const Dropdown = styled.div`
   @media (max-width: 768px) {
     display: flex;
     margin: 0 auto;
-    p {
-      max-width: 90%;
-    }
   }
 `;
 
