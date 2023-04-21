@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import { usePrefersReducedMotion } from '../hooks'
-import { srConfig } from '../config'
-import sr from '../utils/sr'
-import { disneyPlus, Gpt3 } from '../assets';
-import { FeaturedProject } from '../components'
+import { useEffect, useRef } from "react";
+import styled from "styled-components";
+import { usePrefersReducedMotion } from "../hooks";
+import { srConfig } from "../config";
+import sr from "../utils/sr";
+import { disneyPlus, Gpt3, CortX } from "../assets";
+import { FeaturedProject } from "../components";
 
 const StyledFeaturedSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -20,24 +20,33 @@ const StyledFeaturedSection = styled.section`
   }
 `;
 
-
-
 const Featured = () => {
-  const prefersReducedMotion = usePrefersReducedMotion()
-  const revealContainer = useRef(null)
-  
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const revealContainer = useRef(null);
+
   useEffect(() => {
     if (prefersReducedMotion) {
-      return
+      return;
     }
-    
-    sr.reveal(revealContainer.current, srConfig())
-  }, [])
+
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
 
   return (
     <>
       <StyledFeaturedSection id="projects">
-        <h2 className="section__heading-top" ref={revealContainer}>Projects</h2>
+        <h2 className="section__heading-top" ref={revealContainer}>
+          Projects
+        </h2>
+        <FeaturedProject
+          projectImg={CortX}
+          alt="CortX To-do App"
+          title="Cortex To-do App"
+          content="CortX is a simple to-do app built with React. That allows users to create, read, filter, sort,edit, and delete Todos."
+          tech="React | Redux | SCSS | Firebase"
+          githubLink="https://github.com/lenharta/cortx-app-v1"
+          url="https://cortx-app-v1.netlify.app/"
+        />
         <FeaturedProject
           projectImg={Gpt3}
           alt="Gpt 3"
@@ -58,7 +67,7 @@ const Featured = () => {
         />
       </StyledFeaturedSection>
     </>
-  )
-}
+  );
+};
 
-export default Featured
+export default Featured;
