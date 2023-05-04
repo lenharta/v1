@@ -1,10 +1,9 @@
-import { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import { Icons } from '../assets'
-import { srConfig } from '../config'
-import { usePrefersReducedMotion } from '../hooks'
-import sr from '../utils/sr'
-
+import { useEffect, useRef } from "react";
+import styled from "styled-components";
+import { Icons } from "../assets";
+import { srConfig } from "../config";
+import { usePrefersReducedMotion } from "../hooks";
+import sr from "../utils/sr";
 
 const StyledStackContainer = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -93,7 +92,7 @@ const StyledStackInnerSub = styled.div`
   width: 100%;
   margin-top: 75px;
   @media (max-width: 480px) {
-    margin-top: 50px
+    margin-top: 50px;
   }
 
   ul {
@@ -143,71 +142,87 @@ const Tools = styled.div`
 `;
 
 const Stack = () => {
-  const prefersReducedMotion = usePrefersReducedMotion()
-  const revealContainer = useRef(null)
-  
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const revealContainer = useRef(null);
+
   useEffect(() => {
     if (prefersReducedMotion) {
-      return
+      return;
     }
-    
-    sr.reveal(revealContainer.current, srConfig())
-  }, [])
+
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
 
   const program1 = (
     <>
       <p>HTML5</p>
       <Icons name="HTML5" />
     </>
-  )
+  );
 
   const program2 = (
     <>
       <p>CSS3</p>
       <Icons name="Css3" />
     </>
-  )
+  );
 
   const program3 = (
     <>
       <p>JavaScript</p>
       <Icons name="JavaScript" />
     </>
-  )
-  
+  );
+
   const program4 = (
     <>
       <p>React.js</p>
       <Icons name="React" />
     </>
-  )
+  );
 
   const program5 = (
     <>
       <p>Sass</p>
       <Icons name="Sass" />
     </>
-  )
+  );
 
-  
-  const progLangItems = [program1, program2, program3, program4, program5]
-  const libraryItems = ["Gatsby", "Axios", "Node.js", "Anime.js", "ScrollReveal", "MaterialUI", "Framer Motion", "React Router"]
-  const toolItems = ["Git", "Github", "Webpack", "Netlify", "Firebase", "Figma"]
+  const progLangItems = [program1, program2, program3, program4, program5];
+  const libraryItems = [
+    "Gatsby",
+    "Axios",
+    "Node.js",
+    "Anime.js",
+    "ScrollReveal",
+    "MaterialUI",
+    "Framer Motion",
+    "React Router",
+  ];
+  const toolItems = [
+    "Git",
+    "Github",
+    "Webpack",
+    "Netlify",
+    "Firebase",
+    "Figma",
+  ];
 
-  
   return (
     <>
-      <StyledStackContainer id="stack" ref={revealContainer} >
+      <StyledStackContainer id="stack" ref={revealContainer}>
         <h2 className="section__heading-top">Stack</h2>
         <StyledStackInner>
           <ProgrammingLangs>
             <div className="title">
               <div className="divider"></div>
-              <h2>Programming Languages</h2>
+              <h2>Tech</h2>
             </div>
             <ul>
               {progLangItems.map((item, i) => (
-                <li key={i} className="list-item">{item}</li>
+                <li key={i} className="list-item">
+                  {item}
+                </li>
               ))}
             </ul>
           </ProgrammingLangs>
@@ -216,11 +231,13 @@ const Stack = () => {
             <Libraries>
               <div className="title">
                 <div className="divider"></div>
-                <h2>Libraries & Frameworks</h2>
+                <h2>Libraries</h2>
               </div>
               <ul>
                 {libraryItems.map((item, i) => (
-                  <li key={i} className="list-item">{item}</li>
+                  <li key={i} className="list-item">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </Libraries>
@@ -228,11 +245,13 @@ const Stack = () => {
             <Tools>
               <div className="title">
                 <div className="divider"></div>
-                <h2>Tools & Platforms</h2>
+                <h2>Tools</h2>
               </div>
               <ul>
                 {toolItems.map((item, i) => (
-                  <li key={i} className="list-item">{item}</li>
+                  <li key={i} className="list-item">
+                    {item}
+                  </li>
                 ))}
               </ul>
             </Tools>
@@ -240,7 +259,7 @@ const Stack = () => {
         </StyledStackInner>
       </StyledStackContainer>
     </>
-  )
-}
+  );
+};
 
-export default Stack
+export default Stack;
